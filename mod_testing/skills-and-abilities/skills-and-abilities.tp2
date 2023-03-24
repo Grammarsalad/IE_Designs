@@ -115,21 +115,19 @@ INCLUDE ~%folder%/components/class_skills/scroll_crafting.tpa~
 BEGIN @220 SUBCOMPONENT @3405 DESIGNATED 220 GROUP @2
 REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee eet iwdee~) @3004
 
-/*
-LAM b_scroll_global_settings
+LAM b_wand_global_settings
 
-LAM b_scroll_level_settings
+LAM b_wand_level_settings
 
-OUTER_SET b_scroll_component = 200
+OUTER_SET b_wand_component = 220
 
 //marker
-COPY_EXISTING ~SW1H04.itm~ ~override/B_sna200.itm~
-ACTION_IF (%b_add_priest_scrolls% = 1) BEGIN //if set to add priest scrolls
-  COPY_EXISTING ~SW1H04.itm~ ~override/B_sna201.itm~ //marks added priest scrolls from _this_ mod, Skills & Abilities
+COPY_EXISTING ~SW1H04.itm~ ~override/B_sna220.itm~
+ACTION_IF (%b_add_2e_wands% = 1) BEGIN //if set to add 2e wands
+//  COPY_EXISTING ~SW1H04.itm~ ~override/B_sna201.itm~ //marks added priest scrolls from _this_ mod, Skills & Abilities
 
-  INCLUDE ~%folder%/lib/Setup_Priest_Scrolls.tpa~
+//  INCLUDE ~%folder%/lib/2e_wands.tpa~
 END
 
-INCLUDE ~%folder%/components/class_skills/scroll_crafting.tpa~
+INCLUDE ~%folder%/components/class_skills/wand_crafting.tpa~
 
-*/
