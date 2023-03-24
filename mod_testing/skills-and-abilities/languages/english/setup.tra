@@ -53,9 +53,13 @@
 @180 = ~Bard Songs Last 1 Turn~
 
 // Group 2 (Update 200-299)
+//scroll crafting
 @200 = ~Add Spell Scroll Crafting: 2e pnp (install this if you plan to make any changes to craft_settings.ini)~
 @201 = ~Add Spell Scroll Crafting: 2e modified~
 @202 = ~Add Spell Scroll Crafting: 3e pnp~
+
+//wand crafting
+@220 = ~Add Wand Crafting: 2e pnp~
 
 // Group 3 (Update 300-399)
 @300 = ~Update Weapon Fighting Styles~
@@ -98,5 +102,6 @@
 @3401 = ~1e Barbarian 'package'~
 @3402 = ~Add Feral Senses~
 @3403 = ~Scroll Crafting~
+@3405 = ~Wand Crafting~
 
 @3500 = ~[LAST TRA HERE]~
