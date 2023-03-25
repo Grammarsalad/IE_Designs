@@ -55,21 +55,28 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
       			FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1) BEGIN
         			READ_SHORT ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
         			PATCH_IF ("%opcode%" = 12) BEGIN // damage opcode
-        			     READ_LONG 0x0001 bon_dam //bonus damage (or flat damage)
-        			     READ_LONG 0x0008 dam_type //type: 0x0 = blunt;  0x10000 = acid; 0x20000 = cold; 0x40000 = electric; 0x80000 = fire; 0x100000 = piercing; 0x200000 = poison; 0x400000 = magic; 0x800000 = missile; 0x1000000 = slashing; 
-        			     READ_LONG 0x001c num_die //number of die thrown
-        			     READ_LONG 0x0001 die_size //size of die 
+                         READ_LONG ("%fx_off%" + 0x04 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "bon_dam"
+                         READ_LONG ("%fx_off%" + 0x08 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dam_type"
+                         //type: 0x0 = blunt;  0x10000 = acid; 0x20000 = cold; 0x40000 = electric; 0x80000 = fire; 0x100000 = piercing; 0x200000 = poison; 0x400000 = magic; 0x800000 = missile; 0x1000000 = slashing; 
+                         READ_LONG ("%fx_off%" + 0x01c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "num_die"
+                         READ_LONG ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
         			     READ_LONG 0x34 gagold  //anything else we need to know about the wand itself??? Usability??? Learnability?
-        			     READ_STRREF 0x0008 z_name
-						 PATCH_PRINT "Spell name: %z_name%, file name %SOURCE_RES%, does %num_die% d %die_size% + %bon_dam% %dam_type% damage."
+        			     READ_STRREF 0x000c z_name
+						// PATCH_PRINT "Spell name: %z_name%, file name %SOURCE_RES%, does %num_die% d %die_size% + %bon_dam% %dam_type% damage."
+                        //any spl of sufficient lev (1/2 die size or greater)
+                        SET spl_lev = (%num_die% / 2) 
+                        // PATCH_PRINT "Spell level is %spl_lev%"
+                        PATCH_IF (dam_type > 0x79999) AND (dam_type < 0x100000) BEGIN
+                            PATCH_PRINT "Spell type of %z_name% is fire_%spl_lev%"
+                        END
+                    END //opcode 12
 
-                                END //opcode 12
-                        END //for
-                    END //magical type
-               END//for
-        END //scroll type
+                END //for
+            END //magical type
+        END//for
+        END //wand type
     END //source size
-BUT_ONLY
+    BUT_ONLY
 
 
 /*
