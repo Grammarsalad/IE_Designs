@@ -66,9 +66,80 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
                         //any spl of sufficient lev (1/2 die size or greater)
                         SET spl_lev = (%num_die% / 2) 
                         // PATCH_PRINT "Spell level is %spl_lev%"
+			PATCH_IF (dam_type < 0x10000) BEGIN
+                           // PATCH_PRINT "Spell type of %z_name% is fire_%spl_lev%"
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~blunt_%spl_lev%~"
+			   END //inner action list stuff
+                        END //blunt damage type
+			PATCH_IF (dam_type > 0x9999) AND (dam_type < 0x20000)  BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~acid_%spl_lev%~"
+			   END //inner action list stuff
+                        END //acid damage type
+			PATCH_IF (dam_type > 0x19999) AND (dam_type < 0x40000)  BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~cold_%spl_lev%~"
+			   END //inner action list stuff
+                        END //cold damage type
+			PATCH_IF (dam_type > 0x39999) AND (dam_type < 0x80000)  BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~elect_%spl_lev%~"
+			   END //inner action list stuff
+                        END //electric damage type
                         PATCH_IF (dam_type > 0x79999) AND (dam_type < 0x100000) BEGIN
-                            PATCH_PRINT "Spell type of %z_name% is fire_%spl_lev%"
-                        END
+                           // PATCH_PRINT "Spell type of %z_name% is fire_%spl_lev%"
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~fire_%spl_lev%~"
+			   END //inner action list stuff
+                        END //fire damage type
+                        PATCH_IF (dam_type > 0x99999) AND (dam_type < 0x200000) BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~stab_%spl_lev%~"
+			   END //inner action list stuff
+                        END //piercing damage type
+                        PATCH_IF (dam_type > 0x199999) AND (dam_type < 0x400000) BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~poison_%spl_lev%~"
+			   END //inner action list stuff
+                        END //poison damage type
+                        PATCH_IF (dam_type > 0x399999) AND (dam_type < 0x800000) BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~magic_%spl_lev%~"
+			   END //inner action list stuff
+                        END //magic damage type
+                        PATCH_IF (dam_type > 0x799999) AND (dam_type < 0x1000000) BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~ranged_%spl_lev%~"
+			   END //inner action list stuff
+                        END //missile damage type
+                        PATCH_IF (dam_type > 0x999999) AND (dam_type < 0x2000000) BEGIN
+			   INNER_ACTION BEGIN
+			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
+                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
+~%SOURCE_RES%~ => ~slash_%spl_lev%~"
+			   END //inner action list stuff
+                        END //slash damage type
+			//magic fire and magic cold
+			
                     END //opcode 12
 
                 END //for
