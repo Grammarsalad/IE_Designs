@@ -33,7 +33,9 @@ END //2e modified
 //////////////////////////////////////////////////////////////////////////
 /////// Step 0: Copy over any initial required files (or for convienience)
 
+COPY ~%folder%/data/wands/wnddam.2da~ ~override~  //wands that do direct damage
 
+//APPEND ~wndcrft.2da~ ~B_%der_spell%%TAB%%type%%TAB%%name%%TAB%%desc%%TAB%%der_scroll%%TAB%%der_spell%%TAB%%final_gold%%TAB%%level%%TAB%%materials%%TAB%%xp_cost%%TAB%%can_fail%~  
 
 //////////////////////////////////////////////////////////////////////////
 /////// Step 1: Find all wand files and create relevant lists
@@ -62,84 +64,18 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
                          READ_LONG ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
         			     READ_LONG 0x34 gagold  //anything else we need to know about the wand itself??? Usability??? Learnability?
         			     READ_STRREF 0x000c z_name
+                                     READ_LONG 0x000c name
+                                     READ_LONG 0x0054 id_desc
 						// PATCH_PRINT "Spell name: %z_name%, file name %SOURCE_RES%, does %num_die% d %die_size% + %bon_dam% %dam_type% damage."
                         //any spl of sufficient lev (1/2 die size or greater)
                         SET spl_lev = (%num_die% / 2) 
                         // PATCH_PRINT "Spell level is %spl_lev%"
-			PATCH_IF (dam_type < 0x10000) BEGIN
-                           // PATCH_PRINT "Spell type of %z_name% is fire_%spl_lev%"
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~blunt_%spl_lev%~"
-			   END //inner action list stuff
-                        END //blunt damage type
-			PATCH_IF (dam_type > 0x9999) AND (dam_type < 0x20000)  BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~acid_%spl_lev%~"
-			   END //inner action list stuff
-                        END //acid damage type
-			PATCH_IF (dam_type > 0x19999) AND (dam_type < 0x40000)  BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~cold_%spl_lev%~"
-			   END //inner action list stuff
-                        END //cold damage type
-			PATCH_IF (dam_type > 0x39999) AND (dam_type < 0x80000)  BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~elect_%spl_lev%~"
-			   END //inner action list stuff
-                        END //electric damage type
-                        PATCH_IF (dam_type > 0x79999) AND (dam_type < 0x100000) BEGIN
-                           // PATCH_PRINT "Spell type of %z_name% is fire_%spl_lev%"
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~fire_%spl_lev%~"
-			   END //inner action list stuff
-                        END //fire damage type
-                        PATCH_IF (dam_type > 0x99999) AND (dam_type < 0x200000) BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~stab_%spl_lev%~"
-			   END //inner action list stuff
-                        END //piercing damage type
-                        PATCH_IF (dam_type > 0x199999) AND (dam_type < 0x400000) BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~poison_%spl_lev%~"
-			   END //inner action list stuff
-                        END //poison damage type
-                        PATCH_IF (dam_type > 0x399999) AND (dam_type < 0x800000) BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~magic_%spl_lev%~"
-			   END //inner action list stuff
-                        END //magic damage type
-                        PATCH_IF (dam_type > 0x799999) AND (dam_type < 0x1000000) BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~ranged_%spl_lev%~"
-			   END //inner action list stuff
-                        END //missile damage type
-                        PATCH_IF (dam_type > 0x999999) AND (dam_type < 0x2000000) BEGIN
-			   INNER_ACTION BEGIN
-			       COPY ~%folder%/lib/wand_lists/wnd_rch.tpa~ ~%folder%/lib/wand_lists/wnd_rch.tpa~ //Wand recharge list
-                                     REPLACE_TEXTUALLY "BEGIN" "BEGIN
-~%SOURCE_RES%~ => ~slash_%spl_lev%~"
-			   END //inner action list stuff
-                        END //slash damage type
-			//magic fire and magic cold
-			
+                        INNER_PATCH_SAVE da_wnd ~%SOURCE_RES%~ BEGIN  END
+                             INNER_ACTION BEGIN
+                                  ACTION_IF (!FILE_CONTAINS_EVALUATED(~wnddam.2da~ ~%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~)) BEGIN
+                                       APPEND ~wnddam.2da~ ~B_%da_wnd%%TAB%%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~
+                                  END
+                             END //end inner action
                     END //opcode 12
 
                 END //for
