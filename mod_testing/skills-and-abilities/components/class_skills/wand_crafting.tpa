@@ -33,7 +33,7 @@ END //2e modified
 //////////////////////////////////////////////////////////////////////////
 /////// Step 0: Copy over any initial required files (or for convienience)
 
-COPY ~%folder%/data/wands/wnddam.2da~ ~override~  //wands that do direct damage
+COPY ~%folder%/data/wands/wndcrft.2da~ ~override~  //wands that do direct damage
 
 //APPEND ~wndcrft.2da~ ~B_%der_spell%%TAB%%type%%TAB%%name%%TAB%%desc%%TAB%%der_scroll%%TAB%%der_spell%%TAB%%final_gold%%TAB%%level%%TAB%%materials%%TAB%%xp_cost%%TAB%%can_fail%~  
 
@@ -72,8 +72,8 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
                         // PATCH_PRINT "Spell level is %spl_lev%"
                         INNER_PATCH_SAVE da_wnd ~%SOURCE_RES%~ BEGIN  END
                              INNER_ACTION BEGIN
-                                  ACTION_IF (!FILE_CONTAINS_EVALUATED(~wnddam.2da~ ~%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~)) BEGIN
-                                       APPEND ~wnddam.2da~ ~B_%da_wnd%%TAB%%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~
+                                  ACTION_IF (!FILE_CONTAINS_EVALUATED(~wndcrft.2da~ ~%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~)) BEGIN
+                                       APPEND ~wndcrft.2da~ ~B_%da_wnd%%TAB%%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%opcode%%TAB%%dam_type%~
                                   END
                              END //end inner action
                     END //opcode 12
