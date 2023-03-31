@@ -56,31 +56,43 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
       			READ_SHORT ("%abil_off%" + 0x20 + (0x38 * "%index%")) "abil_fx_idx"
       			FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1) BEGIN
         			READ_SHORT ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
+        			PATCH_IF !("%opcode%" < 0) AND !("%opcode%" > 6) BEGIN //0 AC/1attacks/2curesleep/3berserking/4 cure berserk/5charm/6charisma
+                         		READ_SHORT ("%fx_off%" + 0x002 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "target"
+                         		READ_SHORT ("%fx_off%" + 0x003 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "power"
+                         		READ_LONG  ("%fx_off%" + 0x004 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "param1"
+                         		READ_LONG  ("%fx_off%" + 0x008 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "param2"
+                         		READ_SHORT ("%fx_off%" + 0x00c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "timing"
+                         		READ_SHORT ("%fx_off%" + 0x00d + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dispel"
+                         		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
+                         		READ_SHORT ("%fx_off%" + 0x012 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob1"
+                         		READ_SHORT ("%fx_off%" + 0x013 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob2"
+				
+				END //opcodes 0 to 
         			PATCH_IF ("%opcode%" = 12) BEGIN // damage opcode
-                         READ_LONG ("%fx_off%" + 0x04 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "bon_dam"
-                         READ_LONG ("%fx_off%" + 0x08 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dam_type"
-                         //type: 0x0 = blunt;  0x10000 = acid; 0x20000 = cold; 0x40000 = electric; 0x80000 = fire; 0x100000 = piercing; 0x200000 = poison; 0x400000 = magic; 0x800000 = missile; 0x1000000 = slashing; 
-                         READ_LONG ("%fx_off%" + 0x01c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "num_die"
-                         READ_LONG ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
-        			     READ_LONG 0x34 gagold  //anything else we need to know about the wand itself??? Usability??? Learnability?
-        			     READ_STRREF 0x000c z_name
-                                     READ_LONG 0x000c name
-                                     READ_LONG 0x0054 id_desc
-						// PATCH_PRINT "Spell name: %z_name%, file name %SOURCE_RES%, does %num_die% d %die_size% + %bon_dam% %dam_type% damage."
-                        //any spl of sufficient lev (1/2 die size or greater)
-                        SET spl_lev = (%num_die% / 2) 
-                        // PATCH_PRINT "Spell level is %spl_lev%"
-                        INNER_PATCH_SAVE da_wnd ~%SOURCE_RES%~ BEGIN  END
-                             INNER_ACTION BEGIN
-                                  ACTION_IF (!FILE_CONTAINS_EVALUATED(~wndcrft.2da~ ~%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~)) BEGIN
-                                       APPEND ~wndcrft.2da~ ~B_%da_wnd%%TAB%%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%opcode%%TAB%%dam_type%~
-                                  END
-                             END //end inner action
-                    END //opcode 12
+                         		READ_LONG ("%fx_off%" + 0x04 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "bon_dam"
+                         		READ_LONG ("%fx_off%" + 0x08 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dam_type"
+                         		//type: 0x0 = blunt;  0x10000 = acid; 0x20000 = cold; 0x40000 = electric; 0x80000 = fire; 0x100000 = piercing; 0x200000 = poison; 0x400000 = magic; 0x800000 = missile; 0x1000000 = slashing; 
+                         		READ_LONG ("%fx_off%" + 0x01c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "num_die"
+                         		READ_LONG ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
+        			     	READ_LONG 0x34 gagold  //anything else we need to know about the wand itself??? Usability??? Learnability?
+        			     	READ_STRREF 0x000c z_name
+                                     	READ_LONG 0x000c name
+                                     	READ_LONG 0x0054 id_desc
+					// PATCH_PRINT "Spell name: %z_name%, file name %SOURCE_RES%, does %num_die% d %die_size% + %bon_dam% %dam_type% damage."
+                        		//any spl of sufficient lev (1/2 die size or greater)
+                        		SET spl_lev = (%num_die% / 2) 
+                        		// PATCH_PRINT "Spell level is %spl_lev%"
+                        		INNER_PATCH_SAVE da_wnd ~%SOURCE_RES%~ BEGIN  END
+                             			INNER_ACTION BEGIN
+                                  			ACTION_IF (!FILE_CONTAINS_EVALUATED(~wndcrft.2da~ ~%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%dam_type%~)) BEGIN
+                                       				APPEND ~wndcrft.2da~ ~B_%da_wnd%%TAB%%da_wnd%%TAB%%name%%TAB%%id_desc%%TAB%%spl_lev%%TAB%%opcode%%TAB%%dam_type%~
+                                  			END
+                             			END //end inner action
+                    		END //opcode 12
 
-                END //for
-            END //magical type
-        END//for
+                	END //for
+            	END //magical type
+        	END//for
         END //wand type
     END //source size
     BUT_ONLY
