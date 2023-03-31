@@ -66,8 +66,15 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
                          		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
                          		READ_SHORT ("%fx_off%" + 0x012 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob1"
                          		READ_SHORT ("%fx_off%" + 0x013 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob2"
-				
-				END //opcodes 0 to 
+					READ_ASCII ("%fx_off%" + 0x014 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "resource"	
+                         		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
+                         		READ_LONG  ("%fx_off%" + 0x01c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "num_die"
+                         		READ_LONG  ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
+                         		READ_LONG  ("%fx_off%" + 0x024 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "save"
+                       			READ_LONG  ("%fx_off%" + 0x028 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "save_bon"
+					PATCH_PRINT "Save bonus is %save_bon%"
+					
+				END //opcodes 0 to 6
         			PATCH_IF ("%opcode%" = 12) BEGIN // damage opcode
                          		READ_LONG ("%fx_off%" + 0x04 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "bon_dam"
                          		READ_LONG ("%fx_off%" + 0x08 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dam_type"
