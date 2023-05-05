@@ -1,1 +1,897 @@
+;Normal
+BalanceMods_Easy=( eType=eChar_None,                iDamage=0,  iCritHit=0,   iAim=0,     iDefense=0,   iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Civilian,            iDamage=0,  iCritHit=0,   iAim=0,     iDefense=0,   iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Soldier,             iDamage=0,  iCritHit=0,   iAim=0,     iDefense=0,   iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Tank,                iDamage=-2, iCritHit=0,   iAim=-20,	  iDefense=0,   iHP=-10, iMobility=-2,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_Sectoid,             iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-3,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Floater,             iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-5,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Thinman,             iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-4,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Muton,               iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-8,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Cyberdisc,           iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-14, iMobility=-2,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_SectoidCommander,    iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-4,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_FloaterHeavy,        iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-10, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_MutonElite,          iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-14, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Ethereal,            iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-15, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Chryssalid,          iDamage=-2, iCritHit=0,   iAim=0,     iDefense=0,   iHP=-4,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Zombie,              iDamage=-2, iCritHit=0,   iAim=0,     iDefense=0,   iHP=-6,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_MutonBerserker,      iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-13, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Sectopod,            iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-22, iMobility=-2,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_Drone,               iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-2,  iMobility=-2,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_Outsider,            iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-2,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_EtherealUber,        iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-35, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_BattleScanner,       iDamage=0,  iCritHit=0,   iAim=0,     iDefense=0,   iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Mechtoid,            iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-20, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_Seeker,              iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-5,  iMobility=-2,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_ExaltOperative,      iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-3,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltSniper,         iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-1,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltHeavy,          iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-5,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltMedic,          iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-3,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteOperative, iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-6,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteSniper,    iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-3,  iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteHeavy,     iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-10, iMobility=-2,  iWill=-20 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteMedic,     iDamage=-2, iCritHit=0,   iAim=-20,   iDefense=0,   iHP=-6,  iMobility=-2,  iWill=-20 )
 
+;Classic
+BalanceMods_Easy=( eType=eChar_None,                iDamage=0,  iCritHit=1,   iAim=0,     iDefense=0, iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Civilian,            iDamage=0,  iCritHit=1,   iAim=0,     iDefense=0, iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Soldier,             iDamage=0,  iCritHit=1,   iAim=0,     iDefense=0, iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Tank,                iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-8,  iMobility=-1,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_Sectoid,             iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-1,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Floater,             iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-2,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Thinman,             iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-2,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Muton,               iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-4,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Cyberdisc,           iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-7,  iMobility=-1,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_SectoidCommander,    iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-2,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_FloaterHeavy,        iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-5,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_MutonElite,          iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-7,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Ethereal,            iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-7,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Chryssalid,          iDamage=-1, iCritHit=1,   iAim=0,     iDefense=0, iHP=-2,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Zombie,              iDamage=-1, iCritHit=1,   iAim=0,     iDefense=0, iHP=-3,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_MutonBerserker,      iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-6,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Sectopod,            iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-11, iMobility=-1,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_Drone,               iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-1,  iMobility=-1,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_Outsider,            iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-1,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_EtherealUber,        iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-17, iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_BattleScanner,       iDamage=0,  iCritHit=1,   iAim=0,     iDefense=0, iHP=0,   iMobility=0,   iWill=0 )
+BalanceMods_Easy=( eType=eChar_Mechtoid,            iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-10, iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_Seeker,              iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-2,  iMobility=-1,  iWill=0 )
+BalanceMods_Easy=( eType=eChar_ExaltOperative,      iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-1,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltSniper,         iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=0,   iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltHeavy,          iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-2,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltMedic,          iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-1,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteOperative, iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-3,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteSniper,    iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-1,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteHeavy,     iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-5,  iMobility=-1,  iWill=-10 )
+BalanceMods_Easy=( eType=eChar_ExaltEliteMedic,     iDamage=-1, iCritHit=1,   iAim=-10,   iDefense=0, iHP=-3,  iMobility=-1,  iWill=-10 )
+
+
+; XCOM HQ Initial Power Supply -- Do not relocate! The game reads these into an array in the order it encounters them, so it needs to be here for the class deco options to work.
+HQ_BASE_POWER=45; Easy
+HQ_BASE_POWER=40; Classic
+HQ_BASE_POWER=35; Brutal
+HQ_BASE_POWER=30; Impossible
+
+; LWR modifications to the game
+NUM_STARTING_SOLDIERS=4                      ; (LWR Default = 4) Female gender chance: a 3 means 1/3 will be female, a 2 is 1/2, a 4 is 1/4, etc.
+PSI_GIFT_CHANCE=100                          ; (LWR Default = 100) Percent chance, upon revealing a pod, that a reveal cinematic will play
+PSI_TRAINING_HOURS=50                        ; (LWR Default = 50) Percent chance, when triggering a shot cinematic, that it will actually play (note: shot cinematics will often not trigger, so even at 100% you will find much less than 100% of your shots leading to cinematics)
+SPECIES_POINT_LIMIT=1                        ; (LWR Default = 1) Set to 1 to have the barracks sorted by class, Set to 0 (was the default for LW1) to have the barracks sorted by rank [NOTE: It takes a new mission to modify the troop orders if you change this variable]
+BASE_DAYS_INJURED=6                          ; (LWR Default = 6) Divisor on a units' will power to determine how effective Overpower is (set to 1 to be highly effective and >20 to be mostly ineffective)
+RAND_DAYS_INJURED=1		                     ; (LWR Default = 1) After this many covert operative extraction or data recovery missions bradford will not talk about objectives before new mission
+RAND_DAYS_INJURED_TANK = 50                  ; (LWR Default = 50) XCOM rolls for panic when they take damage more than this % of their remaining HP (set to 100 to never have XCOM panic from damage)
+BARRACKS_CAPACITY=10                         ; (LWR Default = 10) Percent of extra fatigue soldiers take for each mission they have completed
+SOLDIER_COST_CLASSIC=1                       ; (LWR Default = 1) Set to 1 to have the tint of armors change to hardcoded values on LCPL promotions, Set to 0 to use the SPEC armor tint changes defined in this dgc.ini only
+HIGH_AIM=1									 ; (LWR Default = 1) Set to 1 to have world panic slowly increase each month based on how many countries have left the XCOM project, Set to 0 to disable monthly panic increases (warning: makes the strategic game a lot easier)
+HQ_STARTING_MONEY=1                          ; (LWR Default = 1) Set to 1 to have Mouse Buttons during the tactical game, Set to 2 to hide the Mouse Buttons during the tactical game 
+REACTION_PENALTY=4f                          ; (LWR Default = 4) Float for base game speed (minimum is 1, maximum is 10) [Alt-F7 decreases speed by 1, Alt-F8 increases speed by 1, Alt-F9 resets game speed to default (REACTION_PENALTY)]
+SW_MORE_POWER=0.5f                           ; (LWR Default = 0.5) Float for modification to fatigue and injury times of the Wolverine Blood 2nd wave option (Note: 0.0f means no fatigue and injury time, 1.0f means Wolverine Blood would have no effect)
+REFLECT_DMG=10                               ; (LWR Default = 10) Amount of time per activated unit for each turn with the second wave option Blitzkrieg (#26) enabled (minimum 1s, maximum 60s)
+DASHING_REACTION_MODIFIER=1.0f               ; (LWR Default = 1.0) Float for modifier of how much environmental damage is done (0.0f = no damage ever, 1.0f = normal LWR damage, 10.0f = All cover is paper)
+SW_COVER_INCREASE=1.0f                       ; (LWR Default = 1.0) Display of unit stats in the bottom left during tactical, pop-up on Mission Complete, and in the barracks (1.0f = stats displayed, 0.0f = no stats displayed or recorded)
+
+; Soldier Values and starting stat modifiers
+SOLDIER_COST=140                             ; All Difficulties
+LOW_AIM=60                                   ; Minimum starting aim for rookie; Midpoint set by soldier character entry; Max = (2 * Mid) - Min (only works with balance soldiers second wave option)
+LOW_MOBILITY=12                              ; Minimum starting mobility for rookie; Midpoint set in soldier character entry;  Max = (2 * Mid) - Min (only works with balance soldiers second wave option)
+HIGH_MOBILITY=0                              ; Relative starting defense, added to amounts in Characters= and BalanceMods entries (only works with balance soldiers second wave option)
+LOW_WILL=5                                   ; Minimum Starting Will for rookie; midpoint set by soldier character entry; Max = (2 * Mid) - Min (only works with balance soldiers second wave option)
+HIGH_WILL=4                                  ; Minimum Starting hp for rookie; midpoint set by soldier character entry; Max = (2 * Mid) - Min (only works with balance soldiers second wave option)
+ROOKIE_AIM=2                                 ; Point cost for aim in soldier build
+ROOKIE_MOBILITY=108                          ; xxyy: xx = Point cost for defense; yy = Point cost for mobility
+ROOKIE_STARTING_WILL=401                     ; xxyy: xx = Point cost for hit points; yy = Point cost for will 
+SOLDIER_COST_HARD=14                         ; Minimum mobility for new soldier / blueshirt to auto-equip Tac Armor instead of Tac Vest
+PSI_NUM_TRAINING_SLOTS=2                     ; Number of soldier slots (and thus soldiers who can be simultaneously trained) in PsiLabs, GeneLabs and Cybernetics Lab/Repair Bay
+
+;SHIV Values
+BASE_DAYS_INJURED_TANK = 48                  ; Hours
+ALLOY_SHIV_HP_BONUS = 4	                     ; These are "base" hp bonuses that require repair.
+HOVER_SHIV_HP_BONUS = 4                      ; These are "base" hp bonuses that require repair.
+
+
+; Supra-Class randomization
+; This is the %chance a soldier will automatically be assigned your least common supra-class (Marksman, Tactical, Weapons, Support) upon his/her first promotion. Otherwise the soldier rolls a d4.
+LATE_UFO_CHANCE = 10	                     ; 0 means class is always random; 100 means always least common; 33 means roughly 50% chance of least common, 10 means roughtly 33% chance of least common, because you also have 1 in 4 chance of rolling it up on a d4.
+
+; Initial soldier appearance
+DEFENDER_MEDIKIT= 8                          ; Rookie armor color: Sets the initial color of rookie armor; stay within default range (0..32)
+COUNCIL_STAT_BONUS= -1                       ; Rookie armor deco; -1 is default; for other basic kevlar variants, try 67 through 79; otherwise you may see high-tech armor images (not all numbers work on all computers; if you get lockups, change back to -1)
+ShowUFOsOnMission= -1                        ; Rookie headgear; See help file for acceptable values. This will overwrite any randomized hair. Set to -1 for no change.
+
+; One-time deco color and headgear change upon selection of soldier class; set to -1 for no change. See Armor Kit codes text file in EW directory for acceptable values. Do not reorder these entries!
+HQ_BASE_POWER = 7                            ; Sniper Color
+HQ_BASE_POWER = -1                           ; Sniper Headgear
+HQ_BASE_POWER = 4                            ; Scout Color
+HQ_BASE_POWER = -1                           ; Scout Headgear
+HQ_BASE_POWER = 24                           ; Rocketeer Color
+HQ_BASE_POWER = -1                           ; Rocketeer Headgear
+HQ_BASE_POWER = 3                            ; Gunner Color
+HQ_BASE_POWER = -1                           ; Gunner Headgear
+HQ_BASE_POWER = 5                            ; Medic Color
+HQ_BASE_POWER = -1                           ; Medic Headgear
+HQ_BASE_POWER = 22                           ; Engineer Color
+HQ_BASE_POWER = -1                           ; Engineer Headgear
+HQ_BASE_POWER = 6                            ; Assault Color
+HQ_BASE_POWER = -1                           ; Assault Headgear
+HQ_BASE_POWER = 12                           ; Infantry Color
+HQ_BASE_POWER = -1                           ; Infantry Headgear
+
+; Original LW Class Colors
+;DEFENDER_MEDIKIT	= 6		; Rookie armor color: Sets the initial color of rookie armor; stay within default range (0..32)
+;COUNCIL_STAT_BONUS	= -1	; Rookie armor deco; -1 is default; for other basic kevlar variants, try 67 through 79; otherwise you may see high-tech armor images (not all numbers work on all computers; if you get lockups, change back to -1)
+;ShowUFOsOnMission	= -1	; Rookie headgear; See help file for acceptable values. This will overwrite any randomized hair. Set to -1 for no change.
+
+; Original LW Class Colors
+;HQ_BASE_POWER = 32			; Sniper Color
+;HQ_BASE_POWER = -1			; Sniper Headgear
+;HQ_BASE_POWER = 15			; Scout Color
+;HQ_BASE_POWER = -1			; Scout Headgear
+;HQ_BASE_POWER = 12			; Rocketeer Color
+;HQ_BASE_POWER = -1			; Rocketeer Headgear
+;HQ_BASE_POWER = 9			; Gunner Color
+;HQ_BASE_POWER = -1			; Gunner Headgear
+;HQ_BASE_POWER = 29			; Medic Color
+;HQ_BASE_POWER = -1			; Medic Headgear
+;HQ_BASE_POWER = 22			; Engineer Color
+;HQ_BASE_POWER = -1			; Engineer Headgear
+;HQ_BASE_POWER = 21			; Assault Color
+;HQ_BASE_POWER = -1			; Assault Headgear
+;HQ_BASE_POWER = 19			; Infantry Color
+;HQ_BASE_POWER = -1			; Infantry Headgear
+
+; Soldier XP Levels
+m_iSoldierXPLevels=0			; PFC
+m_iSoldierXPLevels=200			; Specialist
+m_iSoldierXPLevels=500			; Lance Corporal
+m_iSoldierXPLevels=1000			; Corporal / Lieutenant
+m_iSoldierXPLevels=2000			; Sergeant / Captain
+m_iSoldierXPLevels=4000			; Technical Sergeant / Major
+m_iSoldierXPLevels=7000			; Gunnery Sergeant / Colonel
+m_iSoldierXPLevels=12000		; Master Sergeant / Field Commander
+
+; Psi XP Levels
+m_iPsiXPLevels=0				; None
+m_iPsiXPLevels=200				; Awakened
+m_iPsiXPLevels=400				; Adept
+m_iPsiXPLevels=600				; Empath
+m_iPsiXPLevels=800				; Psion
+m_iPsiXPLevels=1000				; Master
+m_iPsiXPLevels=99999			; Englightened (Volunteer)
+m_iPsiXPLevels=99999			; N/A
+
+; Soldier progression on level up
+;subclass-specific stat upgrades for Long War
+; iWill / iAim use format xxyyzz, where zz is fixed, and xx + Rand(yy) is Hidden Potential. Will also gets +Rand(iRandWillIncrease) every level
+; iHP uses format xxyy, where yy is fixed, with Roll(xx) chance of +1 using Hidden Potential
+; +Rand(iRandWillIncrease) Will granted every level to ever class if Hidden Potential not active
+
+; iHP: xxyy -- xx is % chance to gain 1 hp with randomized stat upgrades SW option, yy is hp to gain under normal settings
+; iAim: xxyyzz -- xx is minimum aim gain with randomized stat upgrades; yy is random parameter added to xx (so, xx+random number between 0 and y-1); zz is aim gain under normal settings
+; iWill: xxyyzz -- xx is minimum will gain with randomzied stat upgrades; yy is random parameter added to xx (so, xx+random number between 0 and y-1) ; zz is will gain under normal settings + iRandWillIncrease
+
+; 11 = Sniper subclass "Sniper"
+SoldierStatProgression=(eClass=11,			eRank=eRank_Squaddie,	iHP=5001, iAim=120916,iWill=20504)
+SoldierStatProgression=(eClass=11,			eRank=eRank_Corporal,	iHP=1000, iAim=20504, iWill=301)
+SoldierStatProgression=(eClass=11,			eRank=eRank_Sergeant,	iHP=1000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=11,			eRank=eRank_Lieutenant,	iHP=1000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=11,			eRank=eRank_Captain,	iHP=1000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=11,			eRank=eRank_Major,	    iHP=1000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=11,			eRank=eRank_Colonel,	iHP=100,  iAim=10302, iWill=100)
+
+; 21 = Sniper subclass "Scout"
+SoldierStatProgression=(eClass=21,			eRank=eRank_Squaddie,	iHP=5001, iAim=51110, iWill=40908)
+SoldierStatProgression=(eClass=21,			eRank=eRank_Corporal,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=21,			eRank=eRank_Sergeant,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=21,			eRank=eRank_Lieutenant,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=21,			eRank=eRank_Captain,	iHP=1000, iAim=10302, iWill=301)
+SoldierStatProgression=(eClass=21,			eRank=eRank_Major,	    iHP=1000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=21,			eRank=eRank_Colonel,	iHP=100,  iAim=100,   iWill=100)
+
+; 12 = Heavy subclass "Rocketeer"
+SoldierStatProgression=(eClass=12,			eRank=eRank_Squaddie,	iHP=5001, iAim=40908, iWill=30706)
+SoldierStatProgression=(eClass=12,			eRank=eRank_Corporal,	iHP=4201, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=12,			eRank=eRank_Sergeant,	iHP=4201, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=12,			eRank=eRank_Lieutenant,	iHP=4200, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=12,			eRank=eRank_Captain,	iHP=4200, iAim=301,   iWill=100)
+SoldierStatProgression=(eClass=12,			eRank=eRank_Major,	    iHP=4100, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=12,			eRank=eRank_Colonel,	iHP=4100, iAim=100,   iWill=100)
+
+; 22 = Heavy subclass "Gunner"
+SoldierStatProgression=(eClass=22,			eRank=eRank_Squaddie,	iHP=5001, iAim=30706, iWill=20504)
+SoldierStatProgression=(eClass=22,			eRank=eRank_Corporal,	iHP=4201, iAim=10302, iWill=301)
+SoldierStatProgression=(eClass=22,			eRank=eRank_Sergeant,	iHP=4201, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=22,			eRank=eRank_Lieutenant,	iHP=4200, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=22,			eRank=eRank_Captain,	iHP=4200, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=22,			eRank=eRank_Major,	    iHP=4100, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=22,			eRank=eRank_Colonel,	iHP=4100, iAim=100,   iWill=100)
+
+; 13 = Support subclass "Medic"
+SoldierStatProgression=(eClass=13,			eRank=eRank_Squaddie,	iHP=5001, iAim=40908, iWill=40908)
+SoldierStatProgression=(eClass=13,			eRank=eRank_Corporal,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=13,			eRank=eRank_Sergeant,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=13,			eRank=eRank_Lieutenant,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=13,			eRank=eRank_Captain,	iHP=1000, iAim=301,   iWill=301)
+SoldierStatProgression=(eClass=13,			eRank=eRank_Major,	    iHP=1000, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=13,			eRank=eRank_Colonel,	iHP=100,  iAim=100,   iWill=100)
+
+; 23 = Support subclass "Engineer"
+SoldierStatProgression=(eClass=23,			eRank=eRank_Squaddie,	iHP=5001, iAim=30706, iWill=30706)
+SoldierStatProgression=(eClass=23,			eRank=eRank_Corporal,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=23,			eRank=eRank_Sergeant,	iHP=1000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=23,			eRank=eRank_Lieutenant,	iHP=1000, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=23,			eRank=eRank_Captain,	iHP=1000, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=23,			eRank=eRank_Major,	    iHP=1000, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=23,			eRank=eRank_Colonel,	iHP=100,  iAim=100,   iWill=100)
+
+; 14 = Assault subclass "Assault"
+SoldierStatProgression=(eClass=14,			eRank=eRank_Squaddie,	iHP=5001, iAim=20504, iWill=51110)
+SoldierStatProgression=(eClass=14,			eRank=eRank_Corporal,	iHP=5001, iAim=301,   iWill=10302)
+SoldierStatProgression=(eClass=14,			eRank=eRank_Sergeant,	iHP=2000, iAim=100,   iWill=10302)
+SoldierStatProgression=(eClass=14,			eRank=eRank_Lieutenant,	iHP=2000, iAim=100,   iWill=10302)
+SoldierStatProgression=(eClass=14,			eRank=eRank_Captain,	iHP=2000, iAim=100,   iWill=10302)
+SoldierStatProgression=(eClass=14,			eRank=eRank_Major,	    iHP=2000, iAim=100,   iWill=10302)
+SoldierStatProgression=(eClass=14,			eRank=eRank_Colonel,	iHP=2000, iAim=100,   iWill=100)
+
+; 24 = Assault subclass "Infantry"
+SoldierStatProgression=(eClass=24,			eRank=eRank_Squaddie,	iHP=5001, iAim=51110, iWill=51110)
+SoldierStatProgression=(eClass=24,			eRank=eRank_Corporal,	iHP=5001, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=24,			eRank=eRank_Sergeant,	iHP=2000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=24,			eRank=eRank_Lieutenant,	iHP=2000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=24,			eRank=eRank_Captain,	iHP=2000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=24,			eRank=eRank_Major,	    iHP=2000, iAim=10302, iWill=10302)
+SoldierStatProgression=(eClass=24,			eRank=eRank_Colonel,	iHP=2000, iAim=100,   iWill=100)
+
+; MEC subclasses are derived from the infantry subclass, MEC subclass = soldier subclass + 20  STAT INCREASES
+; 31 = MEC subclass "MEC Sniper / Jaeger"
+SoldierStatProgression=(eClass=31,			eRank=eRank_Squaddie,	iHP=100, iAim=51110, iWill=100)
+SoldierStatProgression=(eClass=31,			eRank=eRank_Corporal,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=31,			eRank=eRank_Sergeant,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=31,			eRank=eRank_Lieutenant,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=31,			eRank=eRank_Captain,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=31,			eRank=eRank_Major,		iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=31,			eRank=eRank_Colonel,	iHP=100, iAim=100, 	 iWill=100)
+
+; 41 = MEC subclass "MEC Scout / Jaeger"
+SoldierStatProgression=(eClass=41,			eRank=eRank_Squaddie,	iHP=100, iAim=51110, iWill=100)
+SoldierStatProgression=(eClass=41,			eRank=eRank_Corporal,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=41,			eRank=eRank_Sergeant,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=41,			eRank=eRank_Lieutenant,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=41,			eRank=eRank_Captain,	iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=41,			eRank=eRank_Major,		iHP=100, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=41,			eRank=eRank_Colonel,	iHP=100, iAim=100, 	 iWill=100)
+
+; 32 = MEC subclass "MEC Rocketeer / Goliath"
+SoldierStatProgression=(eClass=32,			eRank=eRank_Squaddie,	iHP=8603, iAim=40908, iWill=100)
+SoldierStatProgression=(eClass=32,			eRank=eRank_Corporal,	iHP=8601, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=32,			eRank=eRank_Sergeant,	iHP=8601, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=32,			eRank=eRank_Lieutenant,	iHP=8601, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=32,			eRank=eRank_Captain,	iHP=8600, iAim=301,   iWill=100)
+SoldierStatProgression=(eClass=32,			eRank=eRank_Major,	    iHP=8500, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=32,			eRank=eRank_Colonel,	iHP=8500, iAim=100,   iWill=100)
+
+; 42 = MEC subclass "MEC Gunner / Goliath"
+SoldierStatProgression=(eClass=42,			eRank=eRank_Squaddie,	iHP=8603, iAim=40908, iWill=100)
+SoldierStatProgression=(eClass=42,			eRank=eRank_Corporal,	iHP=8601, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=42,			eRank=eRank_Sergeant,	iHP=8601, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=42,			eRank=eRank_Lieutenant,	iHP=8601, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=42,			eRank=eRank_Captain,	iHP=8600, iAim=301,   iWill=100)
+SoldierStatProgression=(eClass=42,			eRank=eRank_Major,	    iHP=8500, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=42,			eRank=eRank_Colonel,	iHP=8500, iAim=100,   iWill=100)
+
+; 33 = MEC subclass "MEC Medic / Shogun"
+SoldierStatProgression=(eClass=33,			eRank=eRank_Squaddie,	iHP=5001, iAim=51110, iWill=100)
+SoldierStatProgression=(eClass=33,			eRank=eRank_Corporal,	iHP=5001, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=33,			eRank=eRank_Sergeant,	iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=33,			eRank=eRank_Lieutenant,	iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=33,			eRank=eRank_Captain,	iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=33,			eRank=eRank_Major,	    iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=33,			eRank=eRank_Colonel,	iHP=2000, iAim=100,   iWill=100)
+
+; 43 = MEC subclass "MEC Engineer / Shogun"
+SoldierStatProgression=(eClass=43,			eRank=eRank_Squaddie,	iHP=5001, iAim=51110, iWill=100)
+SoldierStatProgression=(eClass=43,			eRank=eRank_Corporal,	iHP=5001, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=43,			eRank=eRank_Sergeant,	iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=43,			eRank=eRank_Lieutenant,	iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=43,			eRank=eRank_Captain,	iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=43,			eRank=eRank_Major,	    iHP=2000, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=43,			eRank=eRank_Colonel,	iHP=2000, iAim=100,   iWill=100)
+
+; 34 = MEC subclass "MEC Assault / Marauder"
+SoldierStatProgression=(eClass=34,			eRank=eRank_Squaddie,	iHP=5802, iAim=30706, iWill=100)
+SoldierStatProgression=(eClass=34,			eRank=eRank_Corporal,	iHP=5701, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=34,			eRank=eRank_Sergeant,	iHP=5701, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=34,			eRank=eRank_Lieutenant,	iHP=5700, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=34,			eRank=eRank_Captain,	iHP=5700, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=34,			eRank=eRank_Major,	    iHP=5700, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=34,			eRank=eRank_Colonel,	iHP=5700, iAim=100,   iWill=100)
+
+; 44 = MEC subclass "MEC Infantry / Marauder"
+SoldierStatProgression=(eClass=44,			eRank=eRank_Squaddie,	iHP=5802, iAim=30706, iWill=100)
+SoldierStatProgression=(eClass=44,			eRank=eRank_Corporal,	iHP=5701, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=44,			eRank=eRank_Sergeant,	iHP=5701, iAim=10302, iWill=100)
+SoldierStatProgression=(eClass=44,			eRank=eRank_Lieutenant,	iHP=5700, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=44,			eRank=eRank_Captain,	iHP=5700, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=44,			eRank=eRank_Major,	    iHP=5700, iAim=100,   iWill=100)
+SoldierStatProgression=(eClass=44,			eRank=eRank_Colonel,	iHP=5700, iAim=100,   iWill=100)
+
+iRandWillIncrease=0                     ; rand(x) to all level ups; turned off if Hidden Potential is active
+iBaseOTSWillIncrease=0                  ; bonus will for psis only
+iRandOTSWillIncrease=0                  ; bonus random will for psis only
+
+; Weights in country selection for new soldiers. The engine sums the total of all weights and then randomly selects among them.
+; So if the USA weight is 6 and the total of all weights is 40, a new soldier has a 6/40 chance of being an American. 
+; Do not reorder these, move this section, or try to add other countries; it will break the system.
+HQ_BASE_POWER=500       ;United States
+HQ_BASE_POWER=250       ;Russia
+HQ_BASE_POWER=250       ;China
+HQ_BASE_POWER=250       ;United Kingdom
+HQ_BASE_POWER=250       ;Germany
+HQ_BASE_POWER=250       ;France
+HQ_BASE_POWER=250       ;Japan
+HQ_BASE_POWER=250       ;India
+HQ_BASE_POWER=200       ;Australia
+HQ_BASE_POWER=50        ;Italy
+HQ_BASE_POWER=18        ;South Korea
+HQ_BASE_POWER=10        ;Turkey
+HQ_BASE_POWER=20        ;Indonesia
+HQ_BASE_POWER=30        ;Spain
+HQ_BASE_POWER=10        ;Pakistan
+HQ_BASE_POWER=200       ;Canada
+HQ_BASE_POWER=10        ;Iran
+HQ_BASE_POWER=12        ;Israel
+HQ_BASE_POWER=90        ;Egypt
+HQ_BASE_POWER=250       ;Brazil
+HQ_BASE_POWER=60        ;Argentina
+HQ_BASE_POWER=90        ;Mexico
+HQ_BASE_POWER=100       ;South Africa
+HQ_BASE_POWER=10        ;Poland
+HQ_BASE_POWER=10        ;Ukraine
+HQ_BASE_POWER=100       ;Nigeria
+HQ_BASE_POWER=3	        ;Venezuela
+HQ_BASE_POWER=10        ;Greece
+HQ_BASE_POWER=4	        ;Colombia
+HQ_BASE_POWER=8         ;Portugal
+HQ_BASE_POWER=10        ;Sweden
+HQ_BASE_POWER=30        ;Ireland
+HQ_BASE_POWER=30        ;Scotland
+HQ_BASE_POWER=10        ;Norway
+HQ_BASE_POWER=10        ;Netherlands
+HQ_BASE_POWER=10        ;Belgium
+HQ_BASE_POWER=2	        ;Bosnia and Herzegovina
+HQ_BASE_POWER=1        	;Honduras
+HQ_BASE_POWER=2	        ;Algeria
+HQ_BASE_POWER=2	        ;Ethiopia
+HQ_BASE_POWER=2	        ;Kenya
+HQ_BASE_POWER=1	        ;Morocco
+HQ_BASE_POWER=1	        ;Tanzania
+HQ_BASE_POWER=1	        ;Zimbabwe
+HQ_BASE_POWER=1	        ;Bangladesh
+HQ_BASE_POWER=1	        ;Kazakhstan
+HQ_BASE_POWER=8	        ;Malaysia
+HQ_BASE_POWER=3	        ;New Zealand
+HQ_BASE_POWER=3	        ;Philippines
+HQ_BASE_POWER=5	        ;Saudi Arabia
+HQ_BASE_POWER=4	        ;Taiwan
+HQ_BASE_POWER=8	        ;Thailand
+HQ_BASE_POWER=6	        ;Vietnam
+HQ_BASE_POWER=4	        ;Austria
+HQ_BASE_POWER=5	        ;Czech Republic
+HQ_BASE_POWER=4	        ;Denmark
+HQ_BASE_POWER=5         ;Finland
+HQ_BASE_POWER=3	        ;Hungary
+HQ_BASE_POWER=3	        ;Romania
+HQ_BASE_POWER=1	        ;Cuba
+HQ_BASE_POWER=1	        ;Guatemala
+HQ_BASE_POWER=1	        ;Panama
+HQ_BASE_POWER=2	        ;Chile
+HQ_BASE_POWER=2	        ;Ecuador
+HQ_BASE_POWER=2	        ;Peru
+HQ_BASE_POWER=0	        ;United Nations
+HQ_BASE_POWER=0	        ;XCOM
+HQ_BASE_POWER=1	        ;Bolivia
+HQ_BASE_POWER=1	        ;Nicaragua
+HQ_BASE_POWER=2	        ;Bulgaria
+HQ_BASE_POWER=2	        ;Croatia
+HQ_BASE_POWER=2	        ;Serbia
+HQ_BASE_POWER=1	        ;Slovakia
+HQ_BASE_POWER=1	        ;Switzerland
+HQ_BASE_POWER=2	        ;Angola
+HQ_BASE_POWER=2	        ;Ghana
+HQ_BASE_POWER=1	        ;Iraq
+HQ_BASE_POWER=1	        ;Jordan
+HQ_BASE_POWER=1	        ;Syria
+HQ_BASE_POWER=1	        ;Mongolia
+HQ_BASE_POWER=1	        ;Costa Rica
+HQ_BASE_POWER=1	        ;El Salvador
+HQ_BASE_POWER=1	        ;Paraguay
+HQ_BASE_POWER=1	        ;Uruguay
+HQ_BASE_POWER=1	        ;Albania
+HQ_BASE_POWER=2	        ;Belarus
+HQ_BASE_POWER=1	        ;Estonia
+HQ_BASE_POWER=1	        ;Iceland
+HQ_BASE_POWER=1	        ;Kosovo
+HQ_BASE_POWER=1	        ;Latvia
+HQ_BASE_POWER=1	        ;Lithuania
+HQ_BASE_POWER=1	        ;Macedonia
+HQ_BASE_POWER=1	        ;Moldova
+HQ_BASE_POWER=1	        ;Montenegro
+HQ_BASE_POWER=1	        ;Slovenia
+HQ_BASE_POWER=1	        ;Botswana
+HQ_BASE_POWER=1	        ;Cameroon
+HQ_BASE_POWER=1         ;Congo
+HQ_BASE_POWER=1	        ;Gabon
+HQ_BASE_POWER=1	        ;Ivory Coast
+HQ_BASE_POWER=1	        ;Libya
+HQ_BASE_POWER=1	        ;Mozambique
+HQ_BASE_POWER=1	        ;Namibia
+HQ_BASE_POWER=1	        ;Senegal
+HQ_BASE_POWER=1	        ;Sudan
+HQ_BASE_POWER=1	        ;Tunisia
+HQ_BASE_POWER=1	        ;Zambia
+HQ_BASE_POWER=1	        ;Afghanistan
+HQ_BASE_POWER=1	        ;Armenia
+HQ_BASE_POWER=1	        ;Azerbaijan
+HQ_BASE_POWER=1	        ;Georgia
+HQ_BASE_POWER=1	        ;Kuwait
+HQ_BASE_POWER=1	        ;Lebanon
+HQ_BASE_POWER=2	        ;Oman
+HQ_BASE_POWER=1	        ;Palestine
+HQ_BASE_POWER=1	        ;Qatar
+HQ_BASE_POWER=1	        ;United Arab Emirates
+HQ_BASE_POWER=1	        ;Yemen
+HQ_BASE_POWER=1	        ;Cambodia
+HQ_BASE_POWER=1	        ;Kyrgyzstan
+HQ_BASE_POWER=2	        ;Laos
+HQ_BASE_POWER=1	        ;Myanmar
+HQ_BASE_POWER=1	        ;Nepal
+HQ_BASE_POWER=3         ;Singapore
+HQ_BASE_POWER=1	        ;Sri Lanka
+HQ_BASE_POWER=1	        ;Tajikistan
+HQ_BASE_POWER=1	        ;Uzbekistan
+
+;Tactical constants
+LOW_COVER_BONUS=30                                                ; The defense increase a unit gains from entering partial cover
+HIGH_COVER_BONUS=50                                               ; The defense increase a unit gains from entering full cover
+HUNKER_BONUS=2.0f                                                 ; The defense multiplier when the unit hunkers down
+AIR_EVADE_DEF=30                                                  ; The defense increase a unit gains from air evasion bonus (Has char prop eCP_AirEvade)
+NO_COVER_DEF=30                                                   ; innate defense value generally for units who can't take cover (Has char prop eCP_NoCover) <-- Ucross: I think this does nothing, and I think that's a good thing
+POISONED_AIM_PENALTY=20                                           ; Offense penalty when you have been corroded (corrosion from acid)
+HARDENED_ENEMY_CRIT_VALUE=60                                      ; Critical penalty against targets with the Hardened property
+FLANKING_CRIT_BONUS=50                                            ; Critical bonus when enemy is flanked
+SW_FLANK_CRIT=100                                                 ; SECOND WAVE: Crit bonus from Absolutely Critical
+SW_ABDUCTION_SITES=50.0f                                          ; SECOND WAVE: Red Fog percent effect
+HQASSAULT_MIN_DAYS=16                                             ; range (in meters) that pistol-slot weapon accuracy degrades (16 meters = 10 tiles in game)
+HQASSAULT_MAX_DAYS=30                                             ; 3.0/This number is 10 times the penalty per meter after pistol slot weapons are fired at targets beyond the range specified in HQASSAULT_MIN_DAYS
+CLOSE_RANGE = 15.0f                                               ; Distance at which close range penalties/bonuses are assessed - NOTE: YOu might think that this should be 16.0f b/c that divided by 1.6 is 10 tiles but that's NOT true, the coding is whacky and so I just set it based on what actually occurs in the game
+AIM_CLIMB = 3.75f                                                 ; This ends up approximately at 5 per tile within 10 tiles and +50 aim at point blank
+ASSAULT_AIM_CLIMB = 7.1698f                                       ; rate at which weapons with the eWP_Assault property lose aim when they are above the close range threshold - This ends up approximately at 8 per tile within 10 tiles and +80 aim at point blank
+ASSAULT_LONG_RANGE_MAX_PENALTY = -100                             ; No description
+SNIPER_AIM_FALL = -14.3396f                                       ; rate at which weapons with the eWP_Sniper property lose aim when they are under the close range threshold - This ends up approximately at 16 per tile within 10 tiles and -160 aim at point blank
+GRAPPLE_DIST=24                                                   ; No description
+MAX_CRIT_WOUND=90                                                 ; chance for a soldier to be critically wounded (instead of dying) can never go over this amount
+UFO_FUSION_SURVIVE=0                                              ; permanent will loss when a soldier is critically wounded
+CB_AIRANDSPACE_BONUS=0                                            ; hours extra fatigue after missions PER critical wound a soldier has suffered in the campaign
+SHOOT_WHEN_PANICKED=0                                             ; when a unit panics, random roll from 0 to this number - 1 (e.g. 0..4)
+HUNKER_DOWN_WHEN_PANICKED=0                                       ; if the roll is < this number, the unit hunkers down, otherwise they shoot (if possible); this roll is separate from attemping to run
+PANIC_SHOT_HIT_PENALTY=80                                         ; shots taken while panicking subtract this amount from their normal chance to hit
+COUNCIL_FUNDING_MULTIPLIER_EASY=1.0f                              ; All Gauss-tech weapons nullify this much Damage Resistance
+UFO_PSI_LINK_SURVIVE=1                                            ; Modifier applied to vanilla Stun Rifle stun chances; 1 means vanilla stun chances will apply; .5 means half vanilla
+BASE_REMOVAL_DAYS=40                                              ; Range of Motion Tracker item (any item with eAbility_TooCloseForComfort) in meters, so that (X Tiles - 27)/1.5
+EXALT_LOOT1=2                                                     ; Base charges for Motion Tracker item
+ContBalance_Normal[0]=(iScientists1=100)                          ; % of cover bonus removed when taking a suppression-based reaction shot
+ContBalance_Normal[1]=(iScientists1=1, 	iEngineers1=80)           ; SECOND WAVE: iScientists: Toggle Green Fog 1=lose 1 aim each turn; iEngineers: Max aim penalty from this effect
+ContBalance_Normal[2]=(iScientists1=1, 	iEngineers1=80)           ; SECOND WAVE: iScientists: Toggle Green Fog 1=lose 1 will each turn; iEngineers: Max will penalty from this effect
+
+; Some Perk settings
+URBAN_DEFENSE=0                                                   ; Cover Tactics (old Semper Vigilans) squad defense bonus (when in cover)
+URBAN_AIM=0                                                       ; Not Used
+INTERNATIONAL_WILL=1                                              ; Strength in Diversity bonus per nationality
+INTERNATIONAL_AIM=0                                               ; International Warriors aim bonus per continent bonus
+TERRA_WILL=0                                                      ; Not Used
+TERRA_DEFENSE=0                                                   ; Natural Leadership defense bonus
+TERRA_XP=3                                                        ; Not used
+COUNCIL_STAT_MAX=12                                               ; Not used
+COUNCIL_FIGHT_BONUS=10                                            ; Lone Wolf aim bonus
+COUNCIL_FIGHT_TILES=4                                             ; Lone Wolf minimum tiles
+PSI_TEST_LIMIT=50                                                 ; Governs Servos Perk; % of Repair Servo points lost when taking damage    
+MIN_SCATTER=2.0                                                   ; Rocket launcher scatter; lower means more accurate rocket fire; Value is average meters of miss if shooting at a target 20 meters away
+GENEMOD_BONEMARROW_RECOVERY_BONUS=0.35f                           ; modifier to time spent recovering from wounds with Adaptive Bone Marrow Genemod (1.0f means no injury time at all)
+FOUNDRY_PISTOL_AIM_BONUS=10                                       ; Aim Bonus with Pistol II foundry project (Don't change from 10, otherwise it screws up some work arounds)
+FOUNDRY_SCOPE_CRIT_BONUS=0                                        ; Not Used
+FOUNDRY_PISTOL_CRIT_BONUS=0                                       ; Not Used
+MIND_CONTROL_DIFFICULTY=0                                         ; Buff that applies to mind control hit chance relative to base psi success rate (negative numbers will lower the hit chance)
+EXALT_LOOT3=0                                                     ; Bonus that applies to psi panic hit chance relative to base psi success rate
+COUNCIL_FUNDING_MULTIPLIER_CLASSIC=240.0                          ; Radius of Area of Effect for Danger Zone perk when coupled with suppression
+COUNCIL_FUNDING_MULTIPLIER_HARD = 1.0f	                          ; Not Used
+
+; Chance of offscreen kills resulting in zombies on Chryssalid terror missions
+TerrorInfectionChance=1	                                          ; Normal
+TerrorInfectionChance=1	                                          ; Classic
+TerrorInfectionChance=1	                                          ; Brutal
+TerrorInfectionChance=1	                                          ; Impossible
+
+; Alien Tactical AI governors
+EXALT_LOOT2=35                                                    ; This is the minimum to-hit chance for the alien to conclude it has a strong attack, good team attack target, or a potential kill shot, making it more likely to shoot than take other choices. Note low-aim aliens will decide they have a strong attack at lower to-hit, hardcoded at offense-30. Vanilla default is 50.
+UFO_HYPERWAVE_SURVIVE=55                                          ; This is the minimum to-hit chance for the alien to conclude it has a vulnerable target. This plays into whether it will move to try to get a choice shot. It may also affect abilities with a % to succeed. Vanilla Default is 55.
+
+; Alien pod behavior -- chance they will lurk rather than patrol on various mission types
+ABDUCTION_LURK_PCT=50
+SMALL_UFO_LURK_PCT=20
+LARGE_UFO_LURK_PCT=50
+
+; Ability governors; higher values mean much more likely to use ability
+ThinManPlagueSlider=4                                         ; Normal
+ThinManPlagueSlider=5                                         ; Classic
+ThinManPlagueSlider=6                                         ; Brutal
+ThinManPlagueSlider=7                                         ; Impossible
+DeathBlossomSlider=5                                          ; Normal
+DeathBlossomSlider=5                                          ; Classic
+DeathBlossomSlider=5                                          ; Brutal
+DeathBlossomSlider=5                                          ; Impossible
+BloodCallSlider=7                                             ; Normal
+BloodCallSlider=7                                             ; Classic
+BloodCallSlider=7                                             ; Brutal
+BloodCallSlider=7                                             ; Impossible
+AlienGrenadeSlider=4                                          ; Normal
+AlienGrenadeSlider=6                                          ; Classic
+AlienGrenadeSlider=8                                          ; Brutal
+AlienGrenadeSlider=10                                          ; Impossible
+SmokeGrenadeSlider=5                                          ; Normal
+SmokeGrenadeSlider=5                                          ; Classic
+SmokeGrenadeSlider=5                                          ; Brutal
+SmokeGrenadeSlider=5                                          ; Impossible
+
+;Initial Alien Bonus Research; how much ground they have to make up before accumulating bonus research that has an effect on the game
+INTERCEPTOR_REFUEL_HOURS=0	;Technically has no effect in LWR now
+
+; Multiplier for alien attribute bonuses (%)
+MaxActiveAIUnits=100	; Normal
+MaxActiveAIUnits=100	; Classic
+MaxActiveAIUnits=100	; Brutal
+MaxActiveAIUnits=100	; Impossible
+
+; Strategy Game Constants
+; Base_Funding: % of each country's total possible satellite funding offered each month when country has no satellite
+BASE_FUNDING = 40		; Normal
+BASE_FUNDING = 40		; Classic
+BASE_FUNDING = 40		; Brutal
+BASE_FUNDING = 40		; Impossible
+
+; Country Funding Multiplier by Difficulty Level; use this to give the system more total cash to give to XCOM
+FundingBalance=1.5	; Normal
+FundingBalance=1.5	; Classic
+FundingBalance=1.5	; Brutal
+FundingBalance=1.5	; Impossible
+
+; Country Funding Amounts: DO NOT REORDER
+FundingAmounts=290	; 0fc 	USA 
+FundingAmounts=180  ; 1fc	Russia 
+FundingAmounts=250  ; 2fc	China
+FundingAmounts=200  ; 3fc	UK 
+FundingAmounts=255  ; 4fc	Germany 
+FundingAmounts=215  ; 5fc	France
+FundingAmounts=270  ; 6fc	Japan 
+FundingAmounts=180  ; 7fc	India 
+FundingAmounts=145  ; 8fc	Australia 
+FundingAmounts=0 	; 9f	Italy 
+FundingAmounts=0 	; 10f 	South Korea 
+FundingAmounts=0    ; 11f	Turkey
+FundingAmounts=0    ; 12f	Indonesia
+FundingAmounts=0 	; 13f	Spain 
+FundingAmounts=0 	; 14f	Pakistan
+FundingAmounts=170 	; 15fc	Canada 
+FundingAmounts=0 	; 16f	Iran
+FundingAmounts=0 	; 17f	Israel 
+FundingAmounts=145 	; 18fc	Egypt 
+FundingAmounts=190  ; 19fc	Brazil 
+FundingAmounts=140 	; 20fc	Argentina 
+FundingAmounts=145 	; 21fc	Mexico 
+FundingAmounts=130 	; 22fc	South Africa 
+FundingAmounts=0 	; 23f	Poland 
+FundingAmounts=0 	; 24f	Ukraine 
+FundingAmounts=145 	; 25fc	Nigeria 
+FundingAmounts=0 	; 26f	Venezuela 
+FundingAmounts=0 	; 27f	Greece 
+FundingAmounts=0 	; 28f	Colombia
+FundingAmounts=0 	; 29f	Portugal
+FundingAmounts=0 	; 30f 	Sweden 
+FundingAmounts=0 	; 31f	Ireland 
+FundingAmounts=0 	; 32f	Scotland 
+FundingAmounts=0 	; 33f	Norway 
+FundingAmounts=0 	; 34f	Netherlands 
+FundingAmounts=0 	; 35f	Belgium 
+
+; Starting Cash Multiplier by Difficulty Level; use this to adjust the starting cash for each country start
+FundingBalance=0.5	; Normal
+FundingBalance=0.5	; Classic
+FundingBalance=0.5	; Brutal
+FundingBalance=0.5	; Impossible
+
+; Initial Cash Amounts: DO NOT REORDER
+FundingAmounts=1200	 ; 0fc 	USA 
+FundingAmounts=1200  ; 1fc	Russia 
+FundingAmounts=1500  ; 2fc	China
+FundingAmounts=900   ; 3fc	UK 
+FundingAmounts=800   ; 4fc	Germany 
+FundingAmounts=900   ; 5fc	France
+FundingAmounts=1500  ; 6fc	Japan 
+FundingAmounts=1600  ; 7fc	India 
+FundingAmounts=1700  ; 8fc	Australia 
+FundingAmounts=0 	 ; 9f	Italy 
+FundingAmounts=0 	 ; 10f 	South Korea 
+FundingAmounts=0     ; 11f	Turkey
+FundingAmounts=0     ; 12	Indonesia
+FundingAmounts=0 	 ; 13f	Spain 
+FundingAmounts=0 	 ; 14	Pakistan
+FundingAmounts=1400  ; 15fc	Canada 
+FundingAmounts=0 	 ; 16	Iran
+FundingAmounts=0 	 ; 17f	Israel 
+FundingAmounts=1200	 ; 18fc	Egypt 
+FundingAmounts=2600  ; 19fc	Brazil 
+FundingAmounts=2400  ; 20fc	Argentina 
+FundingAmounts=1500  ; 21fc	Mexico 
+FundingAmounts=1500  ; 22fc	South Africa 
+FundingAmounts=0 	 ; 23f	Poland 
+FundingAmounts=0 	 ; 24f	Ukraine 
+FundingAmounts=1600  ; 25fc	Nigeria 
+FundingAmounts=0 	 ; 26	Venezuela 
+FundingAmounts=0 	 ; 27f	Greece 
+FundingAmounts=0 	 ; 28f	Colombia
+FundingAmounts=0 	 ; 29	Portugal
+FundingAmounts=0 	 ; 30f 	Sweden 
+FundingAmounts=0 	 ; 31f	Ireland 
+FundingAmounts=0 	 ; 32f	Scotland 
+FundingAmounts=0 	 ; 33f	Norway 
+FundingAmounts=0 	 ; 34f	Netherlands 
+FundingAmounts=0 	 ; 35f	Belgium 
+
+; Starter, Country and Continent bonuses
+
+; Bonus Amount by Difficulty Level; use this to adjust all amounts of bonus granted (for those bonuses with numeric values) -- min value of 1; Probably shouldn't change; will alter foundry and item enums and break those bonuses
+FundingBalance=1	; Normal
+FundingBalance=1	; Classic
+FundingBalance=1	; Brutal
+FundingBalance=1	; Impossible
+
+;Note a single country can map to multiple bonuses, and multiple countries can map to the same bonus
+;eItem : 0=starting bonus, 1=country bonus, 2=continent bonus
+;iCash : for countries, starting bonus index -- (if eItem=0); Do not change! 
+;iElerium : country ID (e.g. 0=USA, 1=Russia) -- -1 for continent bonuses -- see country funding amounts above for country IDs
+;iAlloys : continent ID (0=North America, 1=South America, 2=Europe, 3=Asia, 4=Africa)
+;iTime : bonus ID == This is the internal code that activates the bonus. Do not change!
+;iEng : bonus value (e.g. 10 might be +10% grey market sell price); set to 1 if granting a one-time bonus
+
+; Continent bonuses
+;					 Bonus Type		Starter Index	Country ID		Continent ID	BonusID		Bonus Value
+ItemBalance_Classic=(eItem=2,		iCash=0,		iElerium=-1,	iAlloys=0,		iTime=2,	iEng=25);	Air Superiority (% reduction in aerospace costs)
+ItemBalance_Classic=(eItem=2,		iCash=0,		iElerium=-1,	iAlloys=1,		iTime=3,	iEng=20); 	Fear No Evil (% reduction in worldwide panic increases and prevents income stoppage from countries that left the XCOM project)
+ItemBalance_Classic=(eItem=2,		iCash=0,		iElerium=-1,	iAlloys=3,		iTime=4,	iEng=35);	New Warfare (% reduction in foundry project costs)
+ItemBalance_Classic=(eItem=2,		iCash=0,		iElerium=-1,	iAlloys=4,		iTime=5,	iEng=65);	Architects of the Future (% reduction in lab and workshop cost)
+ItemBalance_Classic=(eItem=2,		iCash=0,		iElerium=-1,	iAlloys=2,		iTime=6,	iEng=10);	Wealth of Nations (% bonus in monthly satellite-based funding)
+; Starting Bonuses
+ItemBalance_Classic=(eItem=0,		iCash=0,		iElerium=20,	iAlloys=1,		iTime=21,	iEng=13);	Vigilis (# Will bonus on soldier creation)
+ItemBalance_Classic=(eItem=0,		iCash=43,		iElerium=20,	iAlloys=1,		iTime=53,	iEng=1);	Public Heroes (300% cash/eng/sci bonus from abductions)
+ItemBalance_Classic=(eItem=0,		iCash=1,		iElerium=8,		iAlloys=3,		iTime=10,	iEng=19); 	Per Ardua Ad Astra (# General ability point bonus on soldier creation)
+ItemBalance_Classic=(eItem=0,		iCash=21,		iElerium=8,		iAlloys=3,		iTime=48,	iEng=15);	Robotics (# bonus aim for new SHIVs and MECs)
+ItemBalance_Classic=(eItem=0,		iCash=2,		iElerium=19,	iAlloys=1,		iTime=22,	iEng=24);	Jungle Scouts (Grants full Tactical Rigging)
+ItemBalance_Classic=(eItem=0,		iCash=3,		iElerium=19,	iAlloys=1,		iTime=54,	iEng=30);	Ready For War (additive % bonus to research credit bonuses)
+ItemBalance_Classic=(eItem=0,		iCash=4,		iElerium=19,	iAlloys=1,		iTime=40,	iEng=1);	Born to Fly (Pilots gain 4 aim per kill)
+ItemBalance_Classic=(eItem=0,		iCash=5,		iElerium=15,	iAlloys=0,		iTime=20,	iEng=1);	Advanced Preparations (Grants starting lab and workshop)
+ItemBalance_Classic=(eItem=0,		iCash=40,		iElerium=15,	iAlloys=0,		iTime=37,	iEng=2);	Cadre (8 soldiers start at rank LCPL)
+ItemBalance_Classic=(eItem=0,		iCash=41,		iElerium=15,	iAlloys=0,		iTime=33,	iEng=1);	Research Focus (2 Free Labs) 
+ItemBalance_Classic=(eItem=0,		iCash=42,		iElerium=2,		iAlloys=3,		iTime=34,	iEng=1);	Assembly Line (2 Free Workshops)
+ItemBalance_Classic=(eItem=0,		iCash=7,		iElerium=2,		iAlloys=3,		iTime=47,	iEng=1);	Xenological Remedies (bonus for gray market corpse sales)
+ItemBalance_Classic=(eItem=0,		iCash=8,		iElerium=2,		iAlloys=3,		iTime=31,	iEng=50);	Deus Ex (% of meld and cash cost reduction)
+ItemBalance_Classic=(eItem=0,		iCash=10,		iElerium=18,	iAlloys=4,		iTime=28,	iEng=5);	For the Sake of Glory (Injury and Fatigue reduced by 15%)
+ItemBalance_Classic=(eItem=0,		iCash=11,		iElerium=5,		iAlloys=2,		iTime=16,	iEng=50);	Quai d'Orsay (% reduction in intel roll cost, % reduction in time between council requests and % defense bonus from fulfilled requests)
+ItemBalance_Classic=(eItem=0,		iCash=12,		iElerium=5,		iAlloys=2,		iTime=36,	iEng=10); 	Foreign Legion (# bonus soldiers at start)
+ItemBalance_Classic=(eItem=0,		iCash=13,		iElerium=4,		iAlloys=2,		iTime=17,	iEng=1);	Skunkworks (Grants Starting workshop and foundry)
+ItemBalance_Classic=(eItem=0,		iCash=14,		iElerium=4,		iAlloys=2,		iTime=12,	iEng=85);	Baumeister (Grants 3 fission generators and % Reduction in facility build time)
+ItemBalance_Classic=(eItem=0,		iCash=15,		iElerium=4,		iAlloys=2,		iTime=52,	iEng=50);	NeoPanzers (% reduction Cash / alloy / elerium for MECs, SHIVs, and their primary weapons)
+ItemBalance_Classic=(eItem=0,		iCash=16,		iElerium=4,		iAlloys=2,		iTime=41,	iEng=1);	Militarization (Soldiers cost less, arrive earlier, and bilets are twice as much per rank)
+ItemBalance_Classic=(eItem=0,		iCash=44,		iElerium=7,		iAlloys=3,		iTime=46,	iEng=20);	Jai Vidwan (additive % bonus for lab adjacencies)
+ItemBalance_Classic=(eItem=0,		iCash=17,		iElerium=7,		iAlloys=3,		iTime=11,	iEng=45); 	Jai Jawan (1 bonus interceptors + UFO Scanners)
+ItemBalance_Classic=(eItem=0,		iCash=18,		iElerium=6,		iAlloys=3,		iTime=13,	iEng=5); 	Ring of Fire (anything above 0 works)
+ItemBalance_Classic=(eItem=0,		iCash=19,		iElerium=6,		iAlloys=3,		iTime=25,	iEng=30);	Ghost in the Machine (# aim bonus for all SHIVs; also 2 free SHIVS)
+ItemBalance_Classic=(eItem=0,		iCash=20,		iElerium=6,		iAlloys=3,		iTime=32,	iEng=7);	Kiryu-Kai Commander (Grants soldier of rank # in random class)
+ItemBalance_Classic=(eItem=0,		iCash=22,		iElerium=6,		iAlloys=3,		iTime=42,	iEng=5);	Global Networking (Intel Scans cost only 20 credits, Grey Market Prices are 50% higher, % bonus in monthly satellite-based funding)
+ItemBalance_Classic=(eItem=0,		iCash=23,		iElerium=21,	iAlloys=0,		iTime=18,	iEng=1800);	Wealthy Benefactor (# bonus in starting cash)
+ItemBalance_Classic=(eItem=0,		iCash=24,		iElerium=21,	iAlloys=0,		iTime=23,	iEng=209);	Ancient Artifact (# enum of free item at game start)
+ItemBalance_Classic=(eItem=0,		iCash=25,		iElerium=21,	iAlloys=0,		iTime=55,	iEng=20);	Legacy of Uxmal (# bonus will, only for psionic training)
+ItemBalance_Classic=(eItem=0,		iCash=27,		iElerium=25,	iAlloys=4,		iTime=43,	iEng=3);	Advanced Conversion (Bonus HP for MEC conversion)
+ItemBalance_Classic=(eItem=0,		iCash=26,		iElerium=25,	iAlloys=4,		iTime=8,	iEng=2); 	Pax Nigerina (# Mobility bonus on soldier creation)
+ItemBalance_Classic=(eItem=0,		iCash=28,		iElerium=25,	iAlloys=4,		iTime=44,	iEng=1);	Bred Tough (All biosoldiers start with 0.5 DR)
+ItemBalance_Classic=(eItem=0,		iCash=29,		iElerium=1,		iAlloys=2,		iTime=14,	iEng=31); 	Uralvagonzavod
+ItemBalance_Classic=(eItem=0,		iCash=30,		iElerium=1,		iAlloys=2,		iTime=29,	iEng=50);	Roscosmos (% reduction in satellite build cost)
+ItemBalance_Classic=(eItem=0,		iCash=31,		iElerium=22,	iAlloys=4,		iTime=9,	iEng=25); 	Resourceful (Grants Improved salvage (Foundry project #)) - Improved Salvage = 39, Alien Metallurgy = 25
+ItemBalance_Classic=(eItem=0,		iCash=32,		iElerium=22,	iAlloys=4,		iTime=27,	iEng=3);	Survival Training (# HP bonus on soldier creation)
+ItemBalance_Classic=(eItem=0,		iCash=33,		iElerium=3,		iAlloys=2,		iTime=15,	iEng=15);	Special Air Service (# Aim bonus on soldier creation)
+ItemBalance_Classic=(eItem=0,		iCash=34,		iElerium=3,		iAlloys=2,		iTime=26,	iEng=12);	Their Finest Hour (Grants Armored Aircraft (Foundry project #) foundry project)
+ItemBalance_Classic=(eItem=0,		iCash=35,		iElerium=3,		iAlloys=2,		iTime=50,	iEng=30);	Sandhurst (% reduction in total ranks for officer upgrades)
+ItemBalance_Classic=(eItem=0,		iCash=36,		iElerium=0,		iAlloys=0,		iTime=19,	iEng=80);	Special Warfare School (% reduction in OTS project cash cost)
+ItemBalance_Classic=(eItem=0,		iCash=37,		iElerium=0,		iAlloys=0,		iTime=24,	iEng=85);	Cheyenne Mountain (% reduction in excavation cost; 3 free elevators in base)
+ItemBalance_Classic=(eItem=0,		iCash=38,		iElerium=0,		iAlloys=0,		iTime=57,	iEng=95);	We Have Ways (% reduction in time to complete autopsies and interrogations)
+ItemBalance_Classic=(eItem=0,		iCash=39,		iElerium=0,		iAlloys=0,		iTime=45,	iEng=1);	Daredevils (Combat Patrol have a 50% chance to not increase in cost after each use and cause half as much damage to the aircraft)
+
+
+; Monthly personnel rewards for each country -- defined once for all difficulties
+ContBalance_Easy[0]=(eCont=0,	iEngineers1=0, iScientists1=0)	;United States
+ContBalance_Easy[1]=(eCont=1,	iEngineers1=0, iScientists1=0)	;Russia
+ContBalance_Easy[2]=(eCont=2,	iEngineers1=0, iScientists1=0)	;China
+ContBalance_Easy[3]=(eCont=3,	iEngineers1=0, iScientists1=0)	;United Kingdom
+ContBalance_Easy[4]=(eCont=4,	iEngineers1=0, iScientists1=0)	;Germany
+ContBalance_Easy[5]=(eCont=5,	iEngineers1=0, iScientists1=0)	;France
+ContBalance_Easy[6]=(eCont=6,	iEngineers1=0, iScientists1=0)	;Japan
+ContBalance_Easy[7]=(eCont=7,	iEngineers1=0, iScientists1=0)	;India
+ContBalance_Easy[8]=(eCont=8,	iEngineers1=0, iScientists1=0)	;Australia
+ContBalance_Easy[9]=(eCont=9)	;
+ContBalance_Easy[10]=(eCont=10)	;
+ContBalance_Easy[11]=(eCont=11)	;
+ContBalance_Easy[12]=(eCont=12)	;
+ContBalance_Easy[13]=(eCont=13)	;
+ContBalance_Easy[14]=(eCont=14)	;
+ContBalance_Easy[15]=(eCont=15,	iEngineers1=0, iScientists1=0)	;Canada
+ContBalance_Easy[16]=(eCont=16)	;
+ContBalance_Easy[17]=(eCont=17)	;
+ContBalance_Easy[18]=(eCont=18,	iEngineers1=0, iScientists1=0)	;Egypt
+ContBalance_Easy[19]=(eCont=19,	iEngineers1=0, iScientists1=0)	;Brazil
+ContBalance_Easy[20]=(eCont=20,	iEngineers1=0, iScientists1=0)	;Argentina
+ContBalance_Easy[21]=(eCont=21,	iEngineers1=0, iScientists1=0)	;Mexico
+ContBalance_Easy[22]=(eCont=22,	iEngineers1=0, iScientists1=0)	;South Africa
+ContBalance_Easy[23]=(eCont=23)	;
+ContBalance_Easy[24]=(eCont=24)	;
+ContBalance_Easy[25]=(eCont=25,	iEngineers1=0, iScientists1=0)	;Nigeria
+ContBalance_Easy[26]=(eCont=26)	;
+ContBalance_Easy[27]=(eCont=27)	;
+ContBalance_Easy[28]=(eCont=28)	;
+ContBalance_Easy[29]=(eCont=29)	;
+ContBalance_Easy[30]=(eCont=30)	;
+ContBalance_Easy[31]=(eCont=31)	;
+ContBalance_Easy[32]=(eCont=32)	;
+ContBalance_Easy[33]=(eCont=33)	;
+ContBalance_Easy[34]=(eCont=34)	;
+ContBalance_Easy[35]=(eCont=35)	;
+
+; Loot and Rewards 
+ABDUCTION_REWARD_CASH=50					; Cash for a "heavy" mission; light, moderate and swarming missions have hardcoded multipliers
+; Resources from alien corpses / wrecks: The values are all 10 times of the actual awarded value to allow for decimals
+;=xxyy, where xx is "alternate" unit type, and yy is "primary" unit type
+; For DRONE, "alternate" = Seeker, "primary" = Drone
+; For HFLOATER, "alternate" = Floater, "primary" = Heavy Floater
+; Elerium Loot
+CYBERDISC_ELERIUM=8							; 4
+HFLOATER_ELERIUM=204						; Floater = 1, H. Floater = 2
+DRONE_ELERIUM=202							; Seeker = 1, Drone = 1
+SECTOPOD_ELERIUM=12							; 6
+MECHTOID_ELERIUM=8							; 4
+CYBERDISC_ALLOYS=8							; 4
+HFLOATER_ALLOYS=204							; Floater = 1, H. Floater = 2
+DRONE_ALLOYS=402							; Seeker = 2.0, Drone = 1.0
+SECTOPOD_ALLOYS=12							; 6
+MECHTOID_ALLOYS=12							; 6
+MECHTOID_MELD=10							; 5
+HFLOATER_MELD=102							; Floater = 0.5, H. Floater = 1.0
+CB_FUNDING_BONUS=2							; Exalt Elite Meld = 1
+CB_FUTURECOMBAT_BONUS=1						; All other alien / Exalt units = .3 MELD
+COUNCIL_FUNDING_MULTIPLIER_NORMAL = 1f		; Not used
+; Total Fragments from alien weapons after mission multiplied by these numbers
+FragmentBalance=0.44						; Normal
+FragmentBalance=0.34						; Classic
+FragmentBalance=0.30						; Brutal
+FragmentBalance=0.22						; Impossible
+; Base UFO Alloys multiplied by these numbers
+ALLOY_UFO_BALANCE=2.0f						; Normal
+ALLOY_UFO_BALANCE=1.66f						; Classic
+ALLOY_UFO_BALANCE=1.25f						; Brutal
+ALLOY_UFO_BALANCE=1.0f						; Impossible
+UFO_ELERIUM_PER_POWER_SOURCE=50				; Normal
+UFO_ELERIUM_PER_POWER_SOURCE=40				; Classic
+UFO_ELERIUM_PER_POWER_SOURCE=30				; Brutal
+UFO_ELERIUM_PER_POWER_SOURCE=25				; Impossible
+; Base alloys provided by each UFO class.
+UFOAlloys=27								; Scouts and Fighters
+UFOAlloys=36								; Raiders and Destroyers and Overseers
+UFOAlloys=72								; Harvesters and Abductors
+UFOAlloys=90								; Transports and Terror Ships
+UFOAlloys=144								; Battleships and Assault Carriers
+UFOAlloys=0									; Not used
+MIN_WRECKED_ALLOYS=0.5f						; Not Used
+MAX_WRECKED_ALLOYS=1						; Not Used
+MAX_LOST_WRECKED_ELERIUM=1					; Not Used
+MIN_LOST_WRECKED_ELERIUM=0.7f				; Not Used
+;% Chance to recover intact when UFO crashes unless EMP used
+UFO_PS_SURVIVE=0							; Power Supply
+UFO_NAV_SURVIVE=50							; Nav Computer
+UFO_STASIS_SURVIVE=30						; Stasis Capsule
+UFO_SURGERY_SURVIVE=30						; Alien Surgery
+UFO_FOOD_SURVIVE=50							; Alien Food and entertainment
+;% EMP Cannon BONUS Chance to recover intact loot and % of elerium recovered when UFO crashes because of an EMP-armed aircraft
+SW_ELERIUM_HALFLIFE=40.0f						
+;% Alien Strategic AI resource numbers
+; Base alien resource gain from harvest mission (+ rand(5))
+UFOAlloys=9									; Scout Harvest
+UFOAlloys=18								; Raider Harvest
+UFOAlloys=27								; Harvester Harvest
+UFOAlloys=36								; Transport Harvest
+; Resource value of each UFO (alien loss when shot down or raided, must be between 0 and 255)
+UFOAlloys=2								; Scout Resource value
+UFOAlloys=4								; Destroyer Resource value
+UFOAlloys=5								; Abductor Resource value
+UFOAlloys=8								; Transport Resource value
+UFOAlloys=11							; Battleship Resource value
+UFOAlloys=7								; Overseer Resource value
+UFOAlloys=2								; Fighter Resource value
+UFOAlloys=3    							; Raider Resource value
+UFOAlloys=4								; Harvester Resource value
+UFOAlloys=7								; Terror Ship Resource value
+UFOAlloys=9								; Assault Carrier Resource value
+; HARDCODED LOOT NOTES
+; Scout/Fighter: 1 PS, 2 NAV
+; Raider: 2 PS, 4 NAV
+; Abductor/Harvester: 2 PS, 4 NAV, 6 Stasis, 2 Surgery
+; Transport/Terror Ship: 4 PS, 4 NAV, 10 Food, 8 Stasis, 2 Surgery
+; Battleship/Assault Carrier: 4 PS, 6 NAV, 2 Fusion Cores
+; Destroyer / Overseer: 4 PS, 4 NAV
+
+
+; Headquarters Values
+; Research/Laboratories
+NUM_STARTING_SCIENTISTS=10
+LAB_MINIMUM=5					; Not Used
+LAB_MULTIPLE=20
+LAB_BONUS=0.3
+LAB_ADJACENCY_BONUS=0.1
+; Engineering/Workshops
+NUM_STARTING_ENGINEERS=10
+WORKSHOP_MINIMUM=5				; Not Used
+WORKSHOP_MULTIPLE=20			
+WORKSHOP_REBATE_PCT=10			; Value is the alloy/elerium rebate for the first workshop, with additional workshops the bonus scales asympotically to 50%
+WORKSHOP_ENG_BONUS=10			; Value is the cash reduction for first workshop, with additional workshops the bonus scales asymptotically to 50%
+ABDUCTION_REWARD_ENG=0.03f		; Scaling factor for time-to-complete item/foundry projects ... rate of time-decrease at optimal engineers 
+; Repair Bay -- Note some repair variables are in DefaultGameData.ini
+CB_EXPERT_BONUS=20				; % of normal build time an item repair takes (also goes down with engineers and Adv Repair foundry project)
+SW_RARE_PSI=20.0f		 		; SECOND WAVE: Wear and Tear: % Chance an item is damaged after a mission regardless of soldier injury (items carried by injured soldiers will still make a separate roll)
+; Power plant numbers must be synchronized with power in facilities entries
+POWER_NORMAL = 4				; Fission Plant
+POWER_THERMAL = 20				; Thermal Plant
+POWER_ELERIUM = 25				; Elerium Plant
+POWER_ADJACENCY_BONUS=2			; Bonus power from two adjacent power plants of any type
+NUM_STARTING_STEAM_VENTS=1		; Not Used
+; Hangar
+INTERCEPTOR_REPAIR_HOURS=300	; Hours to repair an interceptor with 100% damage. Setting this below 75 reportedly induces buggy behavior. If you play with this anyway, and get the 0-days-to-repair bug, set to 700+ until the bugs go away.
+INTERCEPTOR_REARM_HOURS=12		; Hours to add any alien-technology-based weapon to an aircraft (Missile systems are hard-coded at 12 hours)
+INTERCEPTOR_TRANSFER_TIME=8		; Hours to send interceptor to another continent
+BASE_SKYRANGER_MAINTENANCE=20	; $$ per month
+; Initial Squad Size. Capped at 12 regardless of upgrades. Changing this will only affect new campaigns.
+SKYRANGER_CAPACITY = 8
+; Satellite management 
+UPLINK_MULTIPLE=20				; Engineers per Uplink/Nexus
+NEXUS_MULTIPLE=5				; Not used
+UPLINK_CAPACITY = 1				; Satellites per uplink
+UPLINK_ADJACENCY_BONUS = 1
+NEXUS_CAPACITY = 2				; Satellites per Nexus
+; Dimnishing Returns SW Option
+SW_SATELLITE_INCREASE=1.155f	; results in 10x cost for 16th satellite
+; Base Building Values
+BASE_EXCAVATE_CASH_COST = 50	; Level 1
+BASE_REMOVE_CASH_COST = 5
+BASE_EXCAVATE_DAYS = 8
