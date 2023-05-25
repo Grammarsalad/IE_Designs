@@ -17,7 +17,7 @@
 ; eWP_Integrated: SHIV. Can stack with eWP_Mec and any of the human limitations. 
 ; eWP_Psionic: Psionic. Must also included a property opening it up to a regular class, such eWP_AnyClass, or it will be unequippable.
 
-Weapons=( strName="", iType=254,                  			ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,                     ABILITIES[3]=0,	  			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Assault,    Properties[1]=eWP_Rifle,     	 Properties[2]=eWP_Pistol,        Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=6,  iEnvironmentDamage=18,  iRange=30,  iReactionRange=30, iReactionAngle=360, iRadius=0,    iCritical=0,  iOffenseBonus=0,  iSuppression=101,  iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 ); Sawed-off Shotgun
+Weapons=( strName="", iType=254, ABILITIES[0]=eAbility_ShotStandard, ABILITIES[1]=eAbility_Overwatch, ABILITIES[2]=0, ABILITIES[3]=0, ABILITIES[4]=0, ABILITIES[5]=0, Properties[0]=eWP_Assault, Properties[1]=eWP_Rifle, Properties[2]=eWP_Pistol, Properties[3]=0, Properties[4]=0, Properties[5]=0, iDamage=6, iEnvironmentDamage=18, iRange=30, iReactionRange=30, iReactionAngle=360, iRadius=0, iCritical=0, iOffenseBonus=0, iSuppression=101, iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 ); Sawed-off Shotgun
 
 ; cost and other variables
 
@@ -36,10 +36,15 @@ Weapons=( strName="", iType=254,                  			ABILITIES[0]=eAbility_ShotS
 ; iWill		-- maximum % chance for item to be damaged after a mission in which the soldier was reduced to 0 hit points, chance is reduced as injury 
 
 ; Gear
-; Line 1 (ItemBalance_Normal)								Cost		MELD/ELERIUM	PERK/ALLOYS		Time		Engineers
-; Line 2 (BalanceMods_Classic)								Flight Fuel	Model Resize	Aim				Defense		DR		Mobility		Max%DamagedChance	
+; Line 1 (ItemBalance_Normal)	 Cost MELD/ELERIUM PERK/ALLOYS Time Engineers
+; Line 2 (BalanceMods_Classic) Flight Fuel Model Resize	Aim Defense DR Mobility Max%DamagedChance	
+
+; comparison
+; SMG
+Itembalance_Normal=(eItem=231,								iCash=-1,	iElerium=0,			iAlloys=0,		iTime=-1,	iEng=-1)
+BalanceMods_Classic=(eType=231,								iDamage=0,	iCritHit=85100065,	iAim=0,			iDefense=0,	iHP=0,	iMobility=1,	iWill=0);
 
 ; Sawed-off Shotgun
-Itembalance_Normal=(eItem=254,								iCash=20,	iElerium=0,			iAlloys=0,		iTime=8,	iEng=3)
-BalanceMods_Classic=(eType=254,								iDamage=0,	iCritHit=50100100,	iAim=0,			iDefense=0, iHP=0,	iMobility=-1,	iWill=0);
+Itembalance_Normal=(eItem=254, iCash=20, iElerium=0, iAlloys=0, iTime=8, iEng=3)
+BalanceMods_Classic=(eType=254, iDamage=0, iCritHit=50100100, iAim=0, iDefense=0, iHP=0, iMobility=-1, iWill=0);
 
