@@ -3,4 +3,4 @@
 ; Gunners gain mayhem at 1st
 ; Squadies can use most weapons and secondary weapons
 
-; -- Actual code --
+; -- Actual code: DefaultGameCore.ini --
