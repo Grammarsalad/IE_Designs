@@ -2,6 +2,7 @@
 ; Sawed-off shotgun unlimited item: done (I think)
 ; Auto weapons: add burst and suppress
 ; Additional ammo for most balistic weapons (assault rifle: 10; 
+; Stun rifle backup weapon
 
 ; -- Actual code: DefaultGameCore.ini --
 ; weapon stats
