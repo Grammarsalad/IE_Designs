@@ -24,7 +24,7 @@ Weapons=( strName="", iType=eItem_Pistol,                   ABILITIES[0]=eAbilit
 
 ;Electric
 
-Weapons=( strName="", iType=eItem_ArcThrower,               ABILITIES[0]=eAbility_ShotStun,       ABILITIES[1]=0,    			             ABILITIES[2]=0,                     ABILITIES[3]=0,                  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Rifle,      Properties[1]=eWP_CantReact,     Properties[2]=eWP_NoReload,      Properties[3]=eWP_Encumber,  Properties[4]=0,				  Properties[5]=0, 		  iDamage=0,  iEnvironmentDamage=0,  iRange=27,  iReactionRange=17, iReactionAngle=200, iRadius=0,    iCritical=0,   iOffenseBonus=0,   iSuppression=0,    iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 ); Stun Rifle
+Weapons=( strName="", iType=eItem_ArcThrower,               ABILITIES[0]=eAbility_ShotStun,       ABILITIES[1]=0,    			             ABILITIES[2]=0,                     ABILITIES[3]=0,                  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Rifle,      Properties[1]=eWP_CantReact,     Properties[2]=eWP_NoReload,      Properties[3]=eWP_Encumber,  Properties[4]=0,				  Properties[5]=0, 		  iDamage=0,  iEnvironmentDamage=0,  iRange=27,  iReactionRange=17, iReactionAngle=200, iRadius=0,    iCritical=0,   iOffenseBonus=0,   iSuppression=0,    iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 ); Stun Rifle
 
 ; cost and other variables
 
