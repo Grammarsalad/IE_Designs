@@ -133,7 +133,6 @@ BalanceMods_Classic=(eType=231,								iDamage=0,	iCritHit=85100065,	iAim=0,			i
 
 ; Sawed-off Shotgun
 Itembalance_Normal=(eItem=254,                iCash=-1, iElerium=0, iAlloys=0, iTime=-1,	iEng=-1)                                  ; altered
-BalanceMods_Classic=(eType=254,								iDamage=0,	iCritHit=50100100,	iAim=0,			iDefense=0, iHP=0,	iMobility=-1,	iWill=0);
 
 ; Machine Pistol
 Itembalance_Normal=(eItem=236,								iCash=-1,	iElerium=0,			iAlloys=0,		iTime=-1,	iEng=-1)
