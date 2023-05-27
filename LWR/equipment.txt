@@ -17,7 +17,51 @@
 ; eWP_Integrated: SHIV. Can stack with eWP_Mec and any of the human limitations. 
 ; eWP_Psionic: Psionic. Must also included a property opening it up to a regular class, such eWP_AnyClass, or it will be unequippable.
 
-Weapons=( strName="", iType=254, ABILITIES[0]=eAbility_ShotStandard, ABILITIES[1]=eAbility_Overwatch, ABILITIES[2]=0, ABILITIES[3]=0, ABILITIES[4]=0, ABILITIES[5]=0, Properties[0]=eWP_Assault, Properties[1]=eWP_Rifle, Properties[2]=eWP_Pistol, Properties[3]=0, Properties[4]=0, Properties[5]=0, iDamage=6, iEnvironmentDamage=18, iRange=30, iReactionRange=30, iReactionAngle=360, iRadius=0, iCritical=0, iOffenseBonus=0, iSuppression=101, iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 ); Sawed-off Shotgun
+;Ballistic
+; Assault Rifle
+Weapons=( strName="", iType=eItem_ExaltAssaultRifle, ABILITIES[0]=eAbility_ShotStandard, ABILITIES[1]=eAbility_Overwatch, ABILITIES[2]=eAbility_Aim, ABILITIES[3]=0, ABILITIES[4]=0, ABILITIES[5]=0, Properties[0]=eWP_AnyClass, Properties[1]=0, Properties[2]=0, Properties[3]=0, Properties[4]=0, Properties[5]=0, iDamage=4, iEnvironmentDamage=12, iRange=30, iReactionRange=30, iReactionAngle=200, iRadius=0, iCritical=20, iOffenseBonus=0,  iSuppression=403,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; Battle Rifle
+Weapons=( strName="", iType=241,        					ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_Aim,          ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Rifle,   	Properties[1]=eWP_Heavy, 		 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=5,  iEnvironmentDamage=15,  iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=20, iOffenseBonus=0,  iSuppression=302,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 ) 
+
+; Assault Carbine
+Weapons=( strName="", iType=32,        					    ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_Aim,          ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_AnyClass,   Properties[1]=0,                 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=3,  iEnvironmentDamage=9,   iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=20, iOffenseBonus=10, iSuppression=302,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 ) 
+
+; SMG
+Weapons=( strName="", iType=231,         				    ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,			 		 ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Rifle,   	Properties[1]=0,   	 			 Properties[2]=0,     			  Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=3,  iEnvironmentDamage=9,   iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=40, iOffenseBonus=0,  iSuppression=302,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; Shotgun
+Weapons=( strName="", iType=eItem_Shotgun,                  ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,                     ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Assault,    Properties[1]=eWP_Rifle,     	 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=6,  iEnvironmentDamage=18,  iRange=30,  iReactionRange=30, iReactionAngle=360, iRadius=0,    iCritical=0,  iOffenseBonus=-10,iSuppression=403,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; SAW
+Weapons=( strName="", iType=eItem_ExaltLMG,                 ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_ShotSuppress, ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Support,    Properties[1]=0,                 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=6,  iEnvironmentDamage=18,  iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=0,  iOffenseBonus=-10,iSuppression=404,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; LMG
+Weapons=( strName="", iType=246,                 			ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_ShotSuppress, ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Support,    Properties[1]=eWP_Encumber,		 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=8,  iEnvironmentDamage=24,  iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=0,  iOffenseBonus=-30,iSuppression=505,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; Strike Rifle
+Weapons=( strName="", iType=226,         				    ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_Aim,          ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Sniper,     Properties[1]=eWP_Overheats,   	 Properties[2]=0,   			  Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=5,  iEnvironmentDamage=15,  iRange=195, iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=20, iOffenseBonus=10, iSuppression=303,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; Sniper Rifle
+Weapons=( strName="", iType=eItem_ExaltSniperRifle,         ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_Aim,          ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Sniper,     Properties[1]=eWP_MoveLimited,   Properties[2]=0,     			  Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=6,  iEnvironmentDamage=18,  iRange=195, iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=20, iOffenseBonus=10, iSuppression=303,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; MEC Minigun
+Weapons=( strName="", iType=eItem_Chaingun,                 ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=eAbility_Aim,          ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Mec,        Properties[1]=0,                 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=8,  iEnvironmentDamage=48,  iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=0,  iOffenseBonus=0,  iSuppression=303,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; SHIV Autocannon 
+Weapons=( strName="", iType=eItem_ShivMinigun,              ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,                     ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Integrated, Properties[1]=0,                 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=8,  iEnvironmentDamage=48,  iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=0,  iOffenseBonus=0,  iSuppression=202,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
+
+; Pistol 
+Weapons=( strName="", iType=eItem_Pistol,                   ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,                     ABILITIES[3]=0,	  			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Pistol,     Properties[1]=0, 		 		 Properties[2]=0,                 Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=3,  iEnvironmentDamage=9,   iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=0,  iOffenseBonus=0,  iSuppression=202,  iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 )
+
+; Machine Autopistol
+Weapons=( strName="", iType=236,         				    ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,          			 ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Pistol,   	Properties[1]=0,		 		 Properties[2]=0,     			  Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=3,  iEnvironmentDamage=9,   iRange=30,  iReactionRange=30, iReactionAngle=200, iRadius=0,    iCritical=20, iOffenseBonus=0,  iSuppression=202,  iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 )
+
+; Sawed-off Shotgun
+Weapons=( strName="", iType=254,                  			ABILITIES[0]=eAbility_ShotStandard,   ABILITIES[1]=eAbility_Overwatch,           ABILITIES[2]=0,                     ABILITIES[3]=0,	  			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Assault,    Properties[1]=eWP_Rifle,     	 Properties[2]=eWP_Pistol,        Properties[3]=0,             Properties[4]=0,               Properties[5]=0,        iDamage=6,  iEnvironmentDamage=18,  iRange=30,  iReactionRange=30, iReactionAngle=360, iRadius=0,    iCritical=0,  iOffenseBonus=0,  iSuppression=101,  iSize=eItemSize_Small, iHPBonus=0, iWillBonus=0 )
+
+; Rocket Launcher 
+Weapons=( strName="", iType=eItem_ExaltRocketLauncher,      ABILITIES[0]=eAbility_ShredderRocket, ABILITIES[1]=eAbility_RocketLauncher,      ABILITIES[2]=0,                     ABILITIES[3]=0,    			  ABILITIES[4]=0,             ABILITIES[5]=0,             Properties[0]=eWP_Explosive,  Properties[1]=eWP_Secondary,     Properties[2]=eWP_NoReload,      Properties[3]=eWP_Heavy,     Properties[4]=0, 			  Properties[5]=0,        iDamage=6,  iEnvironmentDamage=35,  iRange=27,  iReactionRange=30, iReactionAngle=200, iRadius=480,  iCritical=0,  iOffenseBonus=0,  iSuppression=909,  iSize=eItemSize_Large, iHPBonus=0, iWillBonus=0 )
 
 ; cost and other variables
 
@@ -45,6 +89,5 @@ Itembalance_Normal=(eItem=231,								iCash=-1,	iElerium=0,			iAlloys=0,		iTime=
 BalanceMods_Classic=(eType=231,								iDamage=0,	iCritHit=85100065,	iAim=0,			iDefense=0,	iHP=0,	iMobility=1,	iWill=0);
 
 ; Sawed-off Shotgun
-Itembalance_Normal=(eItem=254, iCash=20, iElerium=0, iAlloys=0, iTime=8, iEng=3)
-BalanceMods_Classic=(eType=254, iDamage=0, iCritHit=50100100, iAim=0, iDefense=0, iHP=0, iMobility=-1, iWill=0);
+Itembalance_Normal=(eItem=254, iCash=-1, iElerium=0, iAlloys=0, iTime=-1,	iEng=-1)
 
