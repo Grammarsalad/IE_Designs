@@ -39,9 +39,9 @@ ALWAYS
 
         INCLUDE ~Spells_and_Magic/lib/snm_functions.tpa~
 
-        INCLUDE ~Spells_and_Magic/lib/lib.tpa~  //morph's hla functions
+        INCLUDE ~Spells_and_Magic/lib/lib.tpa~  			//morph's hla functions
 
-        INCLUDE ~Spells_and_Magic/lib/hla_actions.tpa~  //SD's hla functions
+        INCLUDE ~Spells_and_Magic/lib/hla_actions.tpa~  		//SD's hla functions
 
         INCLUDE ~Spells_and_Magic/lib/add_headers.tpa~
 
