@@ -87,6 +87,7 @@ READ_LONG  0x0008 ref_num 																//spell name
     END																					// spell type match 
   END 																					// ref num non-zero 
 END 
+
 APPEND ~wndcrft.2da~ ~B_%da_spl%%TAB%%spl_type%%TAB%%da_spl%%TAB%fire%TAB%%opcodez%~  	//Arb_name; spell_res;Opcode;
 
 
