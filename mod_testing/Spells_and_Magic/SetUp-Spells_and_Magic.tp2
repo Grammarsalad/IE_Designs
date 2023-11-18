@@ -1,0 +1,209 @@
+BACKUP ~backup/Spells_and_Magic~
+AUTHOR ~Grammarsalad~
+//README ~Spells_and_Magic\Spells_and_Magic_README.pdf~
+
+VERSION ~0.91.02~
+
+
+ALWAYS
+
+        OUTER_SPRINT ~folder~ ~Spells_and_Magic~
+
+ 	ACTION_IF GAME_IS ~bg2ee~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~bg2ee~
+        END
+
+ 	ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~bgee~
+        END
+
+ 	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
+          OUTER_SPRINT ~game~ ~iwdee~
+        END
+
+ 	ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
+          OUTER_SPRINT ~style~ ~bgee~
+        END
+
+ 	ACTION_IF GAME_IS ~iwdee~ THEN BEGIN
+          OUTER_SPRINT ~style~ ~iwdee~
+        END
+
+  	INCLUDE ~Spells_and_Magic/Spells_and_Magic.ini~
+
+        INCLUDE ~Spells_and_Magic/craft_settings.ini~
+
+        INCLUDE ~Spells_and_Magic/lib/variables.ini~
+
+        INCLUDE ~Spells_and_Magic/lib/item_casting.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/snm_functions.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/lib.tpa~  //morph's hla functions
+
+        INCLUDE ~Spells_and_Magic/lib/hla_actions.tpa~  //SD's hla functions
+
+        INCLUDE ~Spells_and_Magic/lib/add_headers.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/add_spell_ex.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/effect_return.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/add_sumtable.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/SEQUENCER_MENU.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/alter_effect.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/remove_lines.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/summon_table.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/splprot_attributes.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/spell_to_innate.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/capture_list.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/spell_clone_effects.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/bg2fp_effect_batches_fnp.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/bg2fp_effect_batches_b_vise.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/bg2fp_effect_batches_spell_saves.tpa~
+
+        INCLUDE ~Spells_and_Magic/lib/extra_alter_effect.tpa~
+
+		INCLUDE ~Spells_and_Magic/lib/scroll_placement.tpa~
+
+END
+
+//Below from IWDification. Looks like a way to check spell.ids for particular spells...
+//ACTION_IF (!FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_SNILLOCS_SNOWBALL_SWARM~) OR override_arcane) BEGIN
+
+//need to keep my options open
+
+ASK_EVERY_COMPONENT
+
+/* Language Settings */
+AUTO_TRA ~Spells_and_Magic/tra/%s~
+LANGUAGE ~English~ ~english~
+         ~Spells_and_Magic/tra/english/setup.tra~
+         ~Spells_and_Magic/tra/english/IWD_spells.tra~  //for IWDEE spells
+         ~Spells_and_Magic/tra/english/new_spells.tra~  //for new spells
+         ~Spells_and_Magic/tra/english/enchant_items.tra~
+//         ~Spells_and_Magic/tra/english/cantrips.tra~  //for cantrips
+//         ~Spells_and_Magic/tra/english/revised.tra~  //for revised
+//         ~Spells_and_Magic/tra/english/items.tra~  //for items
+         ~Spells_and_Magic/tra/english/icons.tra~   //icons
+
+
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+//
+//	200: Craft Spell Scrolls: Add Spell Scroll Crafting: 2e pnp
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+
+BEGIN @200  //Add Spell Scroll Crafting
+
+COPY ~%folder%/data/wands/wndcrft.2da~ ~override~  //SCROLL 2da
+
+//2da master lists for wands
+COPY_EXISTING_REGEXP GLOB ~.*\.spl~ ~override~ //copies all spl files
+PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+READ_LONG  0x0008 ref_num //spell name
+  PATCH_IF (ref_num > 0) BEGIN   //Non empty name
+  READ_SHORT 0x001c type //spell type
+	PATCH_IF (type = 1) OR (type = 2) BEGIN  //cleric or wiz spell only
+	LPF RETURN_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 524288 RET ref the_opcode eff_par2 eff_resource END // fire spells
+	  PATCH_IF (%the_opcode% = 12) AND (%eff_par2% = 524288) BEGIN  //
+	     //PATCH_PRINT "ref is %ref%; the_opcode is %the_opcode%."
+		INNER_PATCH_SAVE da_spl ~%ref%~ BEGIN  END
+		INNER_PATCH_SAVE spl_type ~%type%~ BEGIN  END
+		INNER_PATCH_SAVE opcodez ~%the_opcode%~ BEGIN  END
+		INNER_ACTION BEGIN
+			APPEND ~wndcrft.2da~ ~B_%da_spl%%TAB%%spl_type%%TAB%%da_spl%%TAB%fire%TAB%%opcodez%~  //Arb_name; spell_res;Opcode;
+		END
+	  END // opcode 12 (fire damage) 
+	LPF RETURN_EFFECT INT_VAR match_opcode = 326 match_target = 2 RET ref the_opcode eff_par2 eff_resource END //Special 326 spels
+		PATCH_IF (%the_opcode% = 326) BEGIN
+		 // PATCH_PRINT "ref is %ref%; the_opcode is %the_opcode%. The eff reference is %eff_resource%"
+		  INNER_PATCH_SAVE sub_spl ~%eff_resource%~ BEGIN  END
+		  INNER_PATCH_SAVE da_spl ~%SOURCE_RES%~ BEGIN  END
+		  INNER_ACTION BEGIN
+			COPY_EXISTING ~%sub_spl%.spl~ ~override~ 						//copies all spl files		
+			  LPF RETURN_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 524288 RET ref the_opcode eff_par2 eff_resource END // fire spells
+				INNER_PATCH_SAVE spl_type ~%type%~ BEGIN  END
+				INNER_PATCH_SAVE opcodez ~%the_opcode%~ BEGIN  END
+				  PATCH_IF (%opcodez% = 12) AND (%eff_par2% = 524288) BEGIN //
+			        PATCH_PRINT "ref is %da_spl%; the_opcode is %opcodez%."	
+					INNER_ACTION BEGIN
+						APPEND ~wndcrft.2da~ ~B_%da_spl%%TAB%%spl_type%%TAB%%da_spl%%TAB%fire%TAB%%opcodez%~  //Arb_name; spell_res;Opcode;
+					END 													//apend 2da 
+				  END 														//326 using opcode 12 (fire damage) 
+		  END // inner action copying 326 subspell
+		END // opcode 236
+		PATCH_IF (%the_opcode% = 122) BEGIN //create temp item 
+		LPF RETURN_EFFECT INT_VAR match_opcode = 122 RET ref the_opcode eff_par2 eff_resource END //Special 122 spels
+			
+		END // opcode 122
+	END //cleric or wiz spell
+  END //not empty name
+END // source	
+BUT_ONLY
+	
+COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
+    PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+    READ_BYTE 0x001C type //Item type
+	READ_LONG  0x000c ref_nam //spell name
+        PATCH_IF (type = 0x0023) AND (ref_nam > 0) BEGIN  //if wand type
+		READ_LONG  0x64 "abil_off" ELSE 0
+  		READ_SHORT 0x68 "abil_num" ELSE 0
+		READ_LONG  0x6a "fx_off"   ELSE 0
+  		FOR (index = 0 ; index < abil_num ; index = index + 1) BEGIN
+    		    READ_BYTE ("%abil_off%" + (0x38 * "%index%")) "type"
+		    PATCH_IF ("%type%" = 3) BEGIN // magical
+      			READ_SHORT ("%abil_off%" + 0x1e + (0x38 * "%index%")) "abil_fx_num"
+      			READ_SHORT ("%abil_off%" + 0x20 + (0x38 * "%index%")) "abil_fx_idx"
+      			FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1) BEGIN
+        			READ_SHORT ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
+        			PATCH_IF ("%opcode%" = 12) BEGIN // damage opcode
+        			     	READ_STRREF 0x000c z_name //item name
+                                READ_LONG 0x000c name     //item ref
+                                READ_LONG 0x0054 id_desc  //identified desc ref 
+                         		READ_SHORT ("%fx_off%" + 0x002 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "target"
+                         		READ_SHORT ("%fx_off%" + 0x003 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "power"
+                         		READ_LONG  ("%fx_off%" + 0x004 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "param1" //bon dam
+                         		READ_LONG  ("%fx_off%" + 0x008 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "param2" //dam type: 0x0 = blunt;  0x10000 = acid; 0x20000 = cold; 0x40000 = electric; 0x80000 = fire; 0x100000 = piercing; 0x200000 = poison; 0x400000 = magic; 0x800000 = missile; 0x1000000 = slashing; 
+                         		READ_SHORT ("%fx_off%" + 0x00c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "timing"
+                         		READ_SHORT ("%fx_off%" + 0x00d + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dispel"
+                         		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
+                         		READ_SHORT ("%fx_off%" + 0x012 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob1"
+                         		READ_SHORT ("%fx_off%" + 0x013 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob2"
+								READ_ASCII ("%fx_off%" + 0x014 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "resource"	
+                         		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
+                         		READ_LONG  ("%fx_off%" + 0x01c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "num_die"
+                         		READ_LONG  ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
+                         		READ_LONG  ("%fx_off%" + 0x024 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "save"
+                       			READ_LONG  ("%fx_off%" + 0x028 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "save_bon"
+								INNER_PATCH_SAVE da_wnd ~%SOURCE_RES%~ BEGIN  END
+								INNER_PATCH_SAVE old_name ~%name%~ BEGIN  END 										// for exclusion later on
+								  PATCH_IF (%param2% > 524287) AND (%param2% < 1048576) BEGIN //fire! fire!
+								    PATCH_PRINT "Item Name: %z_name%. Filename is: %da_wnd%. Opcode: %opcode%"
+								  END
+				END //12 dam opcode
+                	END //for
+            	END //magical type
+        	END//for
+        END //wand type
+    END //source size
+    BUT_ONLY
+
+/*
+	INNER_PATCH_SAVE da_spl ~%ref%~ BEGIN  END
+		INNER_ACTION BEGIN
+			APPEND ~wndcrft.2da~ ~B_%da_spl%%TAB%%da_spl%%TAB%f~  //Arb_name; spell_res;Opcode;
+		END
+*/
