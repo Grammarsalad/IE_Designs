@@ -56,6 +56,51 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
       			READ_SHORT ("%abil_off%" + 0x20 + (0x38 * "%index%")) "abil_fx_idx"
       			FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1) BEGIN
         			READ_SHORT ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
+        			PATCH_IF ("%opcode%" = 12) BEGIN // damage opcode
+        			     	READ_STRREF 0x000c z_name //item name
+                                     	READ_LONG 0x000c name     //item ref
+                                     	READ_LONG 0x0054 id_desc  //identified desc ref 
+                         		READ_SHORT ("%fx_off%" + 0x002 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "target"
+                         		READ_SHORT ("%fx_off%" + 0x003 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "power"
+                         		READ_LONG  ("%fx_off%" + 0x004 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "param1" //bon dam
+                         		READ_LONG  ("%fx_off%" + 0x008 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "param2" //dam type: 0x0 = blunt;  0x10000 = acid; 0x20000 = cold; 0x40000 = electric; 0x80000 = fire; 0x100000 = piercing; 0x200000 = poison; 0x400000 = magic; 0x800000 = missile; 0x1000000 = slashing; 
+                         		READ_SHORT ("%fx_off%" + 0x00c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "timing"
+                         		READ_SHORT ("%fx_off%" + 0x00d + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "dispel"
+                         		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
+                         		READ_SHORT ("%fx_off%" + 0x012 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob1"
+                         		READ_SHORT ("%fx_off%" + 0x013 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "prob2"
+					READ_ASCII ("%fx_off%" + 0x014 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "resource"	
+                         		READ_LONG  ("%fx_off%" + 0x00e + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "duration"
+                         		READ_LONG  ("%fx_off%" + 0x01c + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "num_die"
+                         		READ_LONG  ("%fx_off%" + 0x020 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "die_size"
+                         		READ_LONG  ("%fx_off%" + 0x024 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "save"
+                       			READ_LONG  ("%fx_off%" + 0x028 + (0x30 * ("%abil_fx_idx%" + "%index2%"))) "save_bon"
+					PATCH_PRINT "Item Name: %z_name%"
+					
+				END //armor/protection opcodes
+                	END //for
+            	END //magical type
+        	END//for
+        END //wand type
+    END //source size
+    BUT_ONLY
+
+
+/*
+COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
+    PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+    READ_BYTE 0x001C type //Item type
+        PATCH_IF (type = 0x0023) BEGIN  //if wand type
+		READ_LONG  0x64 "abil_off" ELSE 0
+  		READ_SHORT 0x68 "abil_num" ELSE 0
+		READ_LONG  0x6a "fx_off"   ELSE 0
+  		FOR (index = 0 ; index < abil_num ; index = index + 1) BEGIN
+    		    READ_BYTE ("%abil_off%" + (0x38 * "%index%")) "type"
+		    PATCH_IF ("%type%" = 3) BEGIN // magical
+      			READ_SHORT ("%abil_off%" + 0x1e + (0x38 * "%index%")) "abil_fx_num"
+      			READ_SHORT ("%abil_off%" + 0x20 + (0x38 * "%index%")) "abil_fx_idx"
+      			FOR (index2 = 0 ; index2 < abil_fx_num ; index2 = index2 + 1) BEGIN
+        			READ_SHORT ("%fx_off%" +        (0x30 * ("%abil_fx_idx%" + "%index2%"))) "opcode"
         			PATCH_IF ("%opcode%" = 0) OR // Armor wands: ac bonus/set
 					 ("%opcode%" = 83) OR // Armor wands: protection from projectile
 					 ("%opcode%" = 100) OR // Armor wands: protection from cre type
@@ -110,8 +155,6 @@ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~ //copies all itm files
     END //source size
     BUT_ONLY
 
-
-/*
 
 						 //Create spell to gold list
                                      INNER_PATCH_SAVE da_spl ~%resource%~ BEGIN  END
