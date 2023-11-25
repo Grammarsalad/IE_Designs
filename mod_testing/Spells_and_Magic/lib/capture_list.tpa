@@ -62,18 +62,24 @@ DEFINE_PATCH_FUNCTION CAPTURE_LISTS
           special_flag_21     			= "-1"
           special_flag_22     			= "-1"
           special_flag_23     			= "-1"
-		  spell_type					= "1"  		//wizard type default: 0=special; 1=wiz; 2=cleric; 3=psionic;4=innate;5=song; 6+=any 
+	  the_opcode				= "12"		//opcode number. Default 12 (direct damage) 
+	  eff_par1     				= "-1"		//par1 if relevant (no default) 
+	  eff_par2     				= "-1"		//par2 if relevant (no default) 
+	  spell_type				= "6"  		//cleric or wizard type default: 0=special; 1=wiz; 2=cleric; 3=psionic;4=innate;5=song; 6=cleric or wiz; 7=any 
 // same for match and new STR_VAR
-  STR_VAR 	cleric_type				= "SAME" 	//relevant only if druid or cleric exclusive (and spell_type = type 2) 
-			output_category      		= "fire" 		//needs to be filled in. "fire" is just the test used rn 
-			2da_file            		= "wndcrft" 	//needs to be filled in, "wndcrft" is just the test used rn 
+  STR_VAR cleric_type				= "SAME" 	//relevant only if druid or cleric exclusive (and spell_type = type 2) 
+	  output_category      			= "fire" 	//needs to be filled in. "fire" is just the test used rn 
+	  2da_file            			= "wndcrft" 	//needs to be filled in, and "2da_file".2da needs to be in game; "wndcrft" is just the test used rn 
 		  
-  RET     da_spl  				//has all matched parameters
-          spl_type          		//returns opcode
-          category            	//effect par1
-          opcodez            	//effect par1
-		  ref
+  RET     da_res  				//spell or item res
+          da_spl  				//res if a spl
+          da_itm 				//res if a itm
+	  spl_type          			//actual spl type (identical to spell_type unless 6+) 
+          category            			//same as output_category
+          opcodez            			//returns relevant opcode
+	  ref					//effect res (needed?) 
 BEGIN
+//CONTINUE 
 // set variables and offsets based on the file type
   INNER_PATCH_SAVE ref ~%SOURCE_RES%~ 		BEGIN  END   	//may be revised depending on other variables 
   INNER_PATCH_SAVE category ~%output_category%~ 	BEGIN  END   	//may be revised 
